@@ -2,8 +2,7 @@
 
 This repository contains the code of my personal webpage. It is built using a React app with TypeScript.
 
-The app was intialised using Vite, and SWC for Fast Refresh.
-
+The app was initialized using Vite, and SWC for Fast Refresh.
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) 
 - [SWC](https://swc.rs/)
 
