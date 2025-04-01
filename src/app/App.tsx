@@ -6,6 +6,7 @@ function App() {
     <>
       <div>
         <Navbar></Navbar>
+        <Navbar></Navbar>
       </div>
     </>
   );
