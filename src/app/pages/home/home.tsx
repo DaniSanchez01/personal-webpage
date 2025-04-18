@@ -12,7 +12,7 @@ function Home() {
         <div className="col-6">
           <img
             src="/src/assets/images/me.jpg"
-            alt="Logo Personal"
+            alt="Personal Picture"
             className="cst-fit rounded-5"
           ></img>
         </div>
