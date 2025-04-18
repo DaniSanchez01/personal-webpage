@@ -1,32 +1,33 @@
 import { Link } from 'react-router-dom';
-import styles from './navbar.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 function Navbar() {
   return (
-    <nav className={`navbar navbar-light bg-light ${styles.navbar}`}>
-      <Link className={`navbar-brand ${styles.navbarBrand}`} to="/">
+    <nav className="navbar navbar-light cst-navbar">
+      <Link className="navbar-brand cst-fit-height" to="/">
         <img
-          src="/src/assets/icons/favicon.ico"
+          src="/src/assets/images/expandedLogo.png"
           alt="Logo Personal"
-          width="50"
-          height="45"
-        ></img>
+          className="cst-fit-height"
+        />
       </Link>
 
-      <div className={styles.navbarLinks}>
-        <Link to="/" className={`nav-link ${styles.navLink}`}>
+      <div className="cst-internal-links">
+        <Link to="/" className="nav-link cst-nav-link">
           Home
         </Link>
-        <Link to="/blog" className={`nav-link ${styles.navLink}`}>
+        <Link to="/blog" className="nav-link cst-nav-link">
           Blog
         </Link>
+      </div>
+
+      <div className="cst-external-links">
         <a
           href="https://www.linkedin.com/in/daniel-sánchez-rodríguez-629626255/"
           target="_blank"
           rel="noopener noreferrer"
-          className={`nav-link ${styles.navLink}`}
+          className="nav-link cst-nav-link"
         >
           <FontAwesomeIcon icon={faLinkedin} size="lg" />
         </a>
@@ -34,7 +35,7 @@ function Navbar() {
           href="https://github.com/DaniSanchez01"
           target="_blank"
           rel="noopener noreferrer"
-          className={`nav-link ${styles.navLink}`}
+          className="nav-link cst-nav-link"
         >
           <FontAwesomeIcon icon={faGithub} size="lg" />
         </a>
