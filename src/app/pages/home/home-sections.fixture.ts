@@ -2,20 +2,26 @@ import { PillProps } from '../../components/pill/pill.component';
 
 export const BLOG_PILL: PillProps = {
   title: 'Blog',
-  description: 'Explora mi blog con artículos sobre desarrollo y tecnología',
+  description:
+    'Explore my articles on software development, tech trends, and coding insights.',
   path: '/blog',
 };
 
-export const ABOUT_PILL: PillProps = {
-  title: 'About Me',
-  description: 'Conoce más sobre mi experiencia y habilidades',
-  path: '/about',
+export const PROJECTS_PILL: PillProps = {
+  title: 'Projects',
+  description: 'Discover some of my personal projects.',
+  path: '/projects',
 };
 
-export const HOME_PILL: PillProps = {
-  title: 'Home',
-  description: 'Vuelve a la página principal',
-  path: '/',
+export const CONTACT_PILL: PillProps = {
+  title: 'Contact',
+  description:
+    'Get in touch for collaborations, opportunities, or just to meet ourselves!',
+  path: '/contact',
 };
 
-export const NAVIGATION_PILLS: PillProps[] = [BLOG_PILL, ABOUT_PILL, HOME_PILL];
+export const NAVIGATION_PILLS: PillProps[] = [
+  PROJECTS_PILL,
+  BLOG_PILL,
+  CONTACT_PILL,
+];

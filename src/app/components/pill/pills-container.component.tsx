@@ -12,7 +12,7 @@ function PillsContainer({ items }: PillsContainerProps) {
           <Pill
             title={item.title}
             description={item.description}
-            link={item.link}
+            path={item.path}
           />
         </div>
       ))}
