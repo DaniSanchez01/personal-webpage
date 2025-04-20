@@ -20,8 +20,20 @@ function Navbar() {
         <Link to="/about" className="nav-link cst-nav-link cst-underline-link">
           About Me
         </Link>
+        <Link
+          to="/projects"
+          className="nav-link cst-nav-link cst-underline-link"
+        >
+          Projects
+        </Link>
         <Link to="/blog" className="nav-link cst-nav-link cst-underline-link">
           Blog
+        </Link>
+        <Link
+          to="/contact"
+          className="nav-link cst-nav-link cst-underline-link"
+        >
+          Contact
         </Link>
       </div>
 

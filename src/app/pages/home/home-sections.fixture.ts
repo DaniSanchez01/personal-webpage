@@ -3,7 +3,7 @@ import { PillProps } from '../../components/pill/pill.component';
 export const BLOG_PILL: PillProps = {
   title: 'Blog',
   description:
-    'Explore my articles on software development, tech trends, and coding insights.',
+    'Take a look at my posts, where I write about my experiences and thoughts.',
   path: '/blog',
 };
 

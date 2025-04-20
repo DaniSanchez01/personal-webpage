@@ -11,7 +11,9 @@ function Home() {
             I am a software engineer with a passion for building scalable and
             efficient systems.
           </p>
-          <button className="cst-read-more-btn">Read more</button>
+          <button type="button" className="cst-read-more-btn">
+            Read more
+          </button>
         </div>
         <div className="col-6">
           <img
