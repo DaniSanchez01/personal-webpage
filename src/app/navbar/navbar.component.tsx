@@ -14,10 +14,13 @@ function Navbar() {
       </Link>
 
       <div className="cst-internal-links">
-        <Link to="/" className="nav-link cst-nav-link">
+        <Link to="/" className="nav-link cst-nav-link cst-underline-link">
           Home
         </Link>
-        <Link to="/blog" className="nav-link cst-nav-link">
+        <Link to="/about" className="nav-link cst-nav-link cst-underline-link">
+          About Me
+        </Link>
+        <Link to="/blog" className="nav-link cst-nav-link cst-underline-link">
           Blog
         </Link>
       </div>
@@ -27,7 +30,7 @@ function Navbar() {
           href="https://www.linkedin.com/in/daniel-sánchez-rodríguez-629626255/"
           target="_blank"
           rel="noopener noreferrer"
-          className="nav-link cst-nav-link"
+          className="nav-link cst-nav-link cst-color-change-link"
         >
           <FontAwesomeIcon icon={faLinkedin} size="lg" />
         </a>
@@ -35,7 +38,7 @@ function Navbar() {
           href="https://github.com/DaniSanchez01"
           target="_blank"
           rel="noopener noreferrer"
-          className="nav-link cst-nav-link"
+          className="nav-link cst-nav-link cst-color-change-link"
         >
           <FontAwesomeIcon icon={faGithub} size="lg" />
         </a>

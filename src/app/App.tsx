@@ -4,6 +4,7 @@ import './styles/colors.css';
 import Navbar from './navbar/navbar.component';
 import Home from './pages/home/home.tsx';
 import Blog from './pages/blog/blog.tsx';
+import AboutMe from './pages/about-me/about-me.tsx';
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
         <Navbar></Navbar>
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* <Route path="/about" element={<About />} /> */}
+          <Route path="/about" element={<AboutMe />} />
           {/* <Route path="/projects" element={<Projects />} /> */}
           <Route path="/blog" element={<Blog />} />
           {/* <Route path="/contact" element={<Contact />} /> */}

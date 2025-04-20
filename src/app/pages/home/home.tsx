@@ -1,3 +1,6 @@
+import PillsContainer from '../../components/pill/pills-container.component';
+import { NAVIGATION_PILLS } from './home-sections.fixture';
+
 function Home() {
   return (
     <div className="container">
@@ -8,6 +11,7 @@ function Home() {
             I am a software engineer with a passion for building scalable and
             efficient systems.
           </p>
+          <button className="cst-read-more-btn">Read more</button>
         </div>
         <div className="col-6">
           <img
@@ -16,6 +20,9 @@ function Home() {
             className="cst-fit rounded-5"
           ></img>
         </div>
+      </div>
+      <div className="container row cst-pills-container">
+        <PillsContainer items={NAVIGATION_PILLS} />
       </div>
     </div>
   );
