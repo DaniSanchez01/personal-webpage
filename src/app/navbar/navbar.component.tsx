@@ -14,26 +14,35 @@ function Navbar() {
       </Link>
 
       <div className="cst-internal-links">
-        <Link to="/" className="nav-link cst-nav-link cst-underline-link">
-          Home
+        <Link
+          to="/"
+          className="nav-link cst-nav-link cst-underline-link cst-color-change-link"
+        >
+          <span>Home</span>
         </Link>
-        <Link to="/about" className="nav-link cst-nav-link cst-underline-link">
-          About Me
+        <Link
+          to="/about"
+          className="nav-link cst-nav-link cst-underline-link cst-color-change-link"
+        >
+          <span>About Me</span>
         </Link>
         <Link
           to="/projects"
-          className="nav-link cst-nav-link cst-underline-link"
+          className="nav-link cst-nav-link cst-underline-link cst-color-change-link"
         >
-          Projects
+          <span>Projects</span>
         </Link>
-        <Link to="/blog" className="nav-link cst-nav-link cst-underline-link">
-          Blog
+        <Link
+          to="/blog"
+          className="nav-link cst-nav-link cst-underline-link cst-color-change-link"
+        >
+          <span>Blog</span>
         </Link>
         <Link
           to="/contact"
-          className="nav-link cst-nav-link cst-underline-link"
+          className="nav-link cst-nav-link cst-underline-link cst-color-change-link"
         >
-          Contact
+          <span>Contact</span>
         </Link>
       </div>
 
