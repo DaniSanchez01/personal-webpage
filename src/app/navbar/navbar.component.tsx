@@ -4,7 +4,7 @@ import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 function Navbar() {
   return (
-    <nav className="navbar navbar-light cst-navbar">
+    <nav className="navbar navbar-light cst-navbar sticky-top">
       <Link className="navbar-brand cst-fit-height" to="/">
         <img
           src="/src/assets/images/expandedLogo.png"
