@@ -2,6 +2,10 @@ import { useState, useRef, FormEvent } from 'react';
 import emailjs from '@emailjs/browser';
 import './ContactForm.css';
 
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
 const ContactForm = () => {
   const form = useRef<HTMLFormElement>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -24,17 +28,17 @@ const ContactForm = () => {
 
     emailjs
       .sendForm(
-        'YOUR_SERVICE_ID', // Reemplaza con tu Service ID
-        'YOUR_TEMPLATE_ID', // Reemplaza con tu Template ID
+        EMAILJS_SERVICE_ID as string,
+        EMAILJS_TEMPLATE_ID as string,
         form.current,
-        'YOUR_PUBLIC_KEY', // Reemplaza con tu Public Key
+        EMAILJS_PUBLIC_KEY as string,
       )
       .then(
         () => {
           setFormStatus({
             show: true,
             isError: false,
-            message: '¡Mensaje enviado correctamente!',
+            message: 'Message sent successfully!',
           });
           if (form.current) form.current.reset();
         },
@@ -42,7 +46,7 @@ const ContactForm = () => {
           setFormStatus({
             show: true,
             isError: true,
-            message: `Error al enviar el mensaje: ${error.text}`,
+            message: `Error sending message: ${error.text}`,
           });
         },
       )
@@ -67,7 +71,7 @@ const ContactForm = () => {
 
       <form ref={form} onSubmit={sendEmail} className="row">
         <div className="row">
-          <div className="col-md-6 mb-3">
+          <div className="col-md-6 mb-4">
             <label htmlFor="user_name" className="form-label">
               Name
             </label>
@@ -80,7 +84,7 @@ const ContactForm = () => {
               required
             />
           </div>
-          <div className="col-md-6 mb-3">
+          <div className="col-md-6 mb-4">
             <label htmlFor="user_email" className="form-label">
               Email
             </label>
@@ -93,7 +97,7 @@ const ContactForm = () => {
               required
             />
           </div>
-          <div className="col-12 mb-3">
+          <div className="col-12 mb-4">
             <label htmlFor="subject" className="form-label">
               Subject
             </label>
@@ -106,9 +110,9 @@ const ContactForm = () => {
               required
             />
           </div>
-          <div className="col-12 mb-3">
+          <div className="col-12 mb-4">
             <label htmlFor="message" className="form-label">
-              Mensaje
+              Message
             </label>
             <textarea
               className="form-control"
