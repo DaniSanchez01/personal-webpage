@@ -43,10 +43,11 @@ const ContactForm = () => {
           if (form.current) form.current.reset();
         },
         (error) => {
+          console.error('Error sending message:', error.text);
           setFormStatus({
             show: true,
             isError: true,
-            message: `Error sending message: ${error.text}`,
+            message: 'An error occurred while sending your message. Please try again later.',
           });
         },
       )
