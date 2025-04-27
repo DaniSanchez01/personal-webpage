@@ -9,7 +9,8 @@ export const BLOG_PILL: PillProps = {
 
 export const PROJECTS_PILL: PillProps = {
   title: 'Projects',
-  description: 'Discover some of my personal projects.',
+  description:
+    'Discover some of my personal projects, contributions and future ideas.',
   path: '/projects',
 };
 

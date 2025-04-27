@@ -1,0 +1,29 @@
+.cst-form {
+  background-color: var(--cst-palette2-2);
+  padding: 1.5rem;
+  border-radius: 0.8rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cst-form .form-control {
+  border: 1px solid var(--cst-palette2-5);
+  background-color: white;
+}
+
+.cst-form .form-control:focus {
+  border-color: var(--cst-palette2-5);
+  box-shadow: 0 0 0 0.5rem rgba(213, 189, 175, 0.25);
+}
+
+.cst-form .form-label {
+  color: var(--cst-palette2-6);
+  font-weight: 500;
+}
+
+.cst-submit-btn:hover {
+  transform: translateY(-2px);
+}
+
+.cst-submit-btn:active {
+  transform: translateY(0);
+}

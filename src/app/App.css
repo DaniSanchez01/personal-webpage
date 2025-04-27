@@ -1,6 +1,7 @@
 /* Globals */
 .app-globals {
   background-color: var(--cst-palette2-3);
+  height: 100vh;
 }
 
 h3 {
@@ -20,13 +21,14 @@ h3 {
 }
 
 /* Navbar */
-.navbar {
+.cst-navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 1rem;
   height: 70px;
   border-bottom: 3px solid var(--cst-palette2-2);
+  background-color: var(--cst-palette2-3);
 }
 
 .cst-internal-links {
@@ -35,6 +37,10 @@ h3 {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+
+  span {
+    font-weight: 600;
+  }
 }
 
 .cst-external-links {
@@ -89,12 +95,12 @@ h3 {
 /* Pills */
 .cst-pills-container {
   border-radius: 1rem;
-  padding: 1rem;
-  margin-top: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .cst-pill {
-  background-color: var(--cst-palette2-4);
+  background-color: var(--cst-palette2-3);
   border-radius: 0.8rem;
   padding: 1.5rem;
   height: 100%;
