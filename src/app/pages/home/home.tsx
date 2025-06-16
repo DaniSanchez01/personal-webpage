@@ -1,6 +1,6 @@
 import PillsContainer from '../../components/pill/pills-container.component';
-import ContactForm from '../../components/contactForm';
 import { NAVIGATION_PILLS } from './home-sections.fixture';
+import ContactSection from '../../components/contactSection/contactSection.component.tsx';
 
 function Home() {
   return (
@@ -32,22 +32,7 @@ function Home() {
           <div className="row cst-pills-container">
             <PillsContainer items={NAVIGATION_PILLS} />
           </div>
-          <div className="row">
-            <div className="col-auto col-md-8">
-              <ContactForm />
-            </div>
-            <div className="col-auto col-md-4">
-              <h1>Let's talk!</h1>
-              <p>
-                Whether it's a quick hello, a question, or a potential
-                collaboration, I'd love to hear from you.
-              </p>
-              <p>
-                I'm always open to connecting with curious minds and exploring
-                new opportunities together.
-              </p>
-            </div>
-          </div>
+          <ContactSection></ContactSection>
         </div>
       </div>
     </>
