@@ -4,7 +4,7 @@ import './styles/colors.css';
 import Navbar from './navbar/navbar.component';
 import Home from './pages/home/home.tsx';
 import Blog from './pages/blog/blog.tsx';
-import AboutMe from './pages/about-me/about-me.tsx';
+import AboutMe from './pages/aboutMe/aboutMe.tsx';
 import Projects from './pages/projects/projects.tsx';
 import Contact from './pages/contact/contact.tsx';
 

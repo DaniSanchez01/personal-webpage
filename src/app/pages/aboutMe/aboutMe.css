@@ -1,0 +1,33 @@
+.cst-about-me-subtitle {
+  color: var(--cst-palette2-7);
+  margin-bottom: 0;
+}
+
+.cst-section-separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.cst-section-separator::before,
+.cst-section-separator::after {
+  content: '';
+  flex: 1;
+  height: 2px;
+  background: #000;
+}
+
+.cst-section-separator::before {
+  margin-right: 1rem;
+}
+
+.cst-section-separator::after {
+  margin-left: 1rem;
+}
+
+.cst-section-separator span {
+  font-weight: bold;
+  font-size: 1.2rem;
+  white-space: nowrap;
+}
