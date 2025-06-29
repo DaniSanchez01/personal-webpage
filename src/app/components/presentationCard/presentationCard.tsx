@@ -52,31 +52,10 @@ const PresentationCard = () => {
         <img
           src={presentationImage}
           alt="Personal Picture"
-          className="cst-fit mb-3 rounded"
-          style={{ border: '2px solid var(--cst-palette2-2)' }}
+          className="cst-fit mb-3 rounded cst-desktop-image"
         />
-        <h4
-          style={{
-            margin: '0 0 0.25rem 0',
-            fontSize: '1.1rem',
-            fontWeight: '700',
-            color: '#000',
-            textAlign: 'center',
-          }}
-        >
-          {name}
-        </h4>
-        <p
-          style={{
-            margin: '0 0 1rem 0',
-            fontSize: '0.9rem',
-            color: 'var(--cst-palette2-6)',
-            fontWeight: '600',
-            textAlign: 'center',
-          }}
-        >
-          {profession}
-        </p>
+        <h4 className="cst-desktop-name">{name}</h4>
+        <p className="cst-desktop-subtitle">{profession}</p>
         <p className="cst-email">
           <FontAwesomeIcon icon={faEnvelope} />
           {email}
