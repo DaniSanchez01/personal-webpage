@@ -29,6 +29,13 @@ export const AWARDS_PILLS_CONTENT: AwardPillProps[] = [
     link: instagramPaper,
   },
   {
+    title: 'Computer Science Graduate',
+    description: 'Final grade: 8.66',
+    year: 2023,
+    organization: 'University of Murcia',
+    link: academicExcellence,
+  },
+  {
     title: 'Honorable Mention: Academic Excellence',
     description:
       'Certificate of Academic Excellence on the Computer Science Degree',

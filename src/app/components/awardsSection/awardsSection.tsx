@@ -5,7 +5,11 @@ const AwardsSection = () => {
   return (
     <>
       <div className="cst-section-separator">
-        <span>Awards & Achievements</span>
+        <span>
+          <img src="/src/assets/icons/favicon.ico" className="cst-h-2" />
+          Awards & Achievements
+          <img src="/src/assets/icons/favicon.ico" className="cst-h-2" />
+        </span>
       </div>
       <div className="container">
         {AWARDS_PILLS_CONTENT.map(
