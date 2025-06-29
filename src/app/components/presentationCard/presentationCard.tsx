@@ -9,7 +9,6 @@ import './presentationCard.css';
 const PresentationCard = () => {
   return (
     <div className="cst-presentation-card">
-      {/* <p>Software Engineer</p> */}
       <img
         src="/src/assets/images/presentationCard.jpeg"
         alt="Personal Picture"

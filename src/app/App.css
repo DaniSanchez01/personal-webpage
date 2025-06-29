@@ -1,7 +1,7 @@
 /* Globals */
 .app-globals {
   background-color: var(--cst-palette2-3);
-  height: 100vh;
+  min-height: 100vh;
 }
 
 h3 {

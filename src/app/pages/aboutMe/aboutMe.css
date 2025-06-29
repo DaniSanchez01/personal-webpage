@@ -15,7 +15,7 @@
   content: '';
   flex: 1;
   height: 2px;
-  background: #000;
+  background: var(--cst-palette2-black);
 }
 
 .cst-section-separator::before {
