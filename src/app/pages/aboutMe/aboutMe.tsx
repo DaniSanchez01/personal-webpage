@@ -1,3 +1,4 @@
+import AwardsSection from '../../components/awardsSection/awardsSection';
 import PresentationCard from '../../components/presentationCard/presentationCard';
 import './aboutMe.css';
 
@@ -10,11 +11,7 @@ function AboutMe() {
         </div>
         <div className="col-md-9">
           <div className="d-flex align-items-end my-3">
-            <img
-              src="/src/assets/icons/favicon.ico"
-              alt="Logo Personal"
-              className="cst-h-4"
-            />
+            <img src="/src/assets/icons/favicon.ico" className="cst-h-3" />
             <h1 className="m-0">Introduce</h1>
           </div>
           <div>
@@ -63,8 +60,13 @@ function AboutMe() {
           </div>
         </div>
       </div>
+      <AwardsSection></AwardsSection>
       <div className="cst-section-separator">
-        <span>My Skills</span>
+        <span>
+          <img src="/src/assets/icons/favicon.ico" className="cst-h-2" />
+          Resume
+          <img src="/src/assets/icons/favicon.ico" className="cst-h-2" />
+        </span>
       </div>
     </div>
   );

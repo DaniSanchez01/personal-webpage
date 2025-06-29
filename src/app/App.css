@@ -8,8 +8,12 @@ h3 {
   color: var(--cst-palette2-6);
 }
 
-.cst-h-4 {
+.cst-h-3 {
   height: 3em;
+}
+
+.cst-h-2 {
+  height: 2em;
 }
 
 /* Fitting */
