@@ -1,0 +1,10 @@
+.cst-presentation-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0.5rem;
+  padding: 1rem;
+  background-color: var(--cst-palette2-1);
+  border-radius: 1rem;
+  border: 0.2rem solid var(--cst-palette2-2);
+}

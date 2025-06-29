@@ -1,11 +1,15 @@
 /* Globals */
 .app-globals {
   background-color: var(--cst-palette2-3);
-  height: 100vh;
+  min-height: 100vh;
 }
 
 h3 {
   color: var(--cst-palette2-6);
+}
+
+.cst-h-4 {
+  height: 3em;
 }
 
 /* Fitting */
@@ -18,6 +22,17 @@ h3 {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+.cst-fit-80 {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+
+.cst-home-content {
+  background-color: var(--cst-palette2-4);
+  border-top: 0.2rem solid var(--cst-palette2-2);
 }
 
 /* Buttons */
