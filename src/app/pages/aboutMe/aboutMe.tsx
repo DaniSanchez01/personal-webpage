@@ -1,3 +1,4 @@
+import AwardsSection from '../../components/awardsSection/awardsSection';
 import PresentationCard from '../../components/presentationCard/presentationCard';
 import './aboutMe.css';
 
@@ -63,8 +64,9 @@ function AboutMe() {
           </div>
         </div>
       </div>
+      <AwardsSection></AwardsSection>
       <div className="cst-section-separator">
-        <span>My Skills</span>
+        <span>Resume</span>
       </div>
     </div>
   );
