@@ -1,0 +1,16 @@
+.cst-timeline {
+  position: relative;
+  padding-left: 40px;
+  margin-top: 2rem;
+}
+
+.cst-timeline::before {
+  content: '';
+  position: absolute;
+  top: -1rem;
+  left: 40px;
+  bottom: 2.5rem;
+  width: 2px;
+  background-color: var(--cst-palette2-2);
+  z-index: 1;
+}

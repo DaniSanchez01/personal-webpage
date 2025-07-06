@@ -2,6 +2,7 @@
 import instagramPaper from '../../../assets/documents/instagramPaper.pdf';
 import c1Certificate from '../../../assets/documents/c1Certificate.pdf';
 import academicExcellence from '../../../assets/images/academicExcellence.jpg';
+import degreeCertificate from '../../../assets/documents/degreeCertificate.pdf';
 
 export interface AwardPillProps {
   title: string;
@@ -33,7 +34,7 @@ export const AWARDS_PILLS_CONTENT: AwardPillProps[] = [
     description: 'Final grade: 8.66',
     year: 2023,
     organization: 'University of Murcia',
-    link: academicExcellence,
+    link: degreeCertificate,
   },
   {
     title: 'Honorable Mention: Academic Excellence',
