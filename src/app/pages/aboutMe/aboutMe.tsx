@@ -1,10 +1,11 @@
 import AwardsSection from '../../components/awardsSection/awardsSection';
 import PresentationCard from '../../components/presentationCard/presentationCard';
+import ResumeSection from '../../components/resumeSection/resumeSection';
 import './aboutMe.css';
 
 function AboutMe() {
   return (
-    <div className="container">
+    <div className="container pb-2">
       <div className="row my-3">
         <div className="col-md-3">
           <PresentationCard></PresentationCard>
@@ -61,13 +62,7 @@ function AboutMe() {
         </div>
       </div>
       <AwardsSection></AwardsSection>
-      <div className="cst-section-separator">
-        <span>
-          <img src="/src/assets/icons/favicon.ico" className="cst-h-2" />
-          Resume
-          <img src="/src/assets/icons/favicon.ico" className="cst-h-2" />
-        </span>
-      </div>
+      <ResumeSection></ResumeSection>
     </div>
   );
 }
