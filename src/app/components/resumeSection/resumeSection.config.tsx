@@ -20,7 +20,7 @@ export const RESUME_STAGES_DATA: ResumeStageProps[] = [
         title: 'Mention in Computational Learning',
         description: `Coursed the Computational Learning specialization on the last year 
         of the degree, learning about ML and their applications in the real world.`,
-        date: ' Sep 2023 - Jun 2023',
+        date: ' Sep 2022 - Jun 2023',
       },
     ],
   },
