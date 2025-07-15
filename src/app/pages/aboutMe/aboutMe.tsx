@@ -1,6 +1,7 @@
 import AwardsSection from '../../components/awardsSection/awardsSection';
 import PresentationCard from '../../components/presentationCard/presentationCard';
 import ResumeSection from '../../components/resumeSection/resumeSection';
+import SkillsSection from '../../components/skillsSection/skillsSection';
 import './aboutMe.css';
 
 function AboutMe() {
@@ -17,32 +18,32 @@ function AboutMe() {
           </div>
           <div>
             <h5 className="fw-bolder">
-              Nice to meet you! I'm Dani Sánchez, a Software Developer with more
-              than 2 years of experience.
+              Nice to meet you! I'm Dani Sánchez, a Software Developer with over
+              2 years of experience.
             </h5>
             <p>
               Born and raised in Molina de Segura, Murcia, I spent my teenage
-              years playing basketball, enjoying the sun and my close ones, but
+              years playing basketball, enjoying the sun and my loved ones, but
               primarily trying to figure out what I would like to do after
               finishing high school. By a twist of fate, I ended up studying
               Computer Science at the University of Murcia, where I discovered
-              my passion for software development.
+              my passion for the field.
             </p>
             <p>
-              My years on the degree, including a full academic year in English
-              at Babeș-Bolyai University (UBB) in Romania as part of a study
-              exchange, played a key role in developing a critical and
-              analytical thinking, as well as learning many core programming
-              skills.
+              Even though I'm currently working as a Software Developer, I love
+              learning about all kinds of programming areas, like AI,
+              cybersecurity, data science, etc. Sometimes programming can be
+              frustrating, but I love the challenge that it brings and the
+              feeling of accomplishment is always worth it.
             </p>
             <p>
-              I started my first work while developing my final degree project,
-              as a researcher on The Cybersecurity & Data Science Lab of my
-              university. After finishing my degree (and a couple months
-              enjoying the summer), I moved to Madrid, where I started working
-              as a Software Developer at Fever. Since then, I've been working on
-              a variety of projects, learning from the talent within the
-              company. And I moved to Murcia again, working fully remote.
+              My years working in a big company taught me to value the clean
+              code practices, always trying to deepen my knowledge of core
+              concepts such as DDD, SOLID principles, Hexagonal Architecture,
+              Design Patterns, etc. I consider myself a backend programmer, but
+              I also enjoy delivering in the frontend and helping in the full
+              process of development. This, along with my interest in learning
+              React, was the reason why that led me to create this website!
             </p>
           </div>
           <div className="row mt-auto">
@@ -63,6 +64,7 @@ function AboutMe() {
       </div>
       <AwardsSection></AwardsSection>
       <ResumeSection></ResumeSection>
+      <SkillsSection></SkillsSection>
     </div>
   );
 }

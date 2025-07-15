@@ -16,15 +16,15 @@ const ResumeSection = () => {
       </div>
       <div className="container">
         <div className="row ">
-          <div className="col-md-3"></div>
-          <div className="col-md-6 cst-timeline cst-timeline-line">
+          <div className="col-md-2"></div>
+          <div className="col-md-8 cst-timeline cst-timeline-line">
             {RESUME_STAGES_DATA.map(
               (resumeStage: ResumeStageProps, index: number) => (
                 <ResumeStage key={index} {...resumeStage} />
               ),
             )}
           </div>
-          <div className="col-md-3"></div>
+          <div className="col-md-2"></div>
         </div>
       </div>
     </>
