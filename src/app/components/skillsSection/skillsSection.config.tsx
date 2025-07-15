@@ -27,7 +27,7 @@ export const TECHNICAL_SKILLS: SkillProps[] = [
   {
     title: 'Git & Version Control',
     description:
-      'Used to Git workflows, branching strategies, and collaboration',
+      'Experienced with Git workflows, branching strategies, and collaboration',
   },
 ];
 
@@ -50,7 +50,7 @@ export const SOFT_SKILLS: SkillProps[] = [
   {
     title: 'Project Management',
     description:
-      'Really used to work withAgile methodologies, sprint planning, and project coordination',
+      'Experienced withAgile methodologies, sprint planning, and project coordination',
   },
   {
     title: 'Motivation',

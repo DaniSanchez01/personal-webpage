@@ -1,4 +1,3 @@
-// Import documents and images
 import instagramPaper from '../../../assets/documents/instagramPaper.pdf';
 import c1Certificate from '../../../assets/documents/c1Certificate.pdf';
 import academicExcellence from '../../../assets/images/academicExcellence.jpg';

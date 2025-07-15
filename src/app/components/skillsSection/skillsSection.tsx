@@ -6,8 +6,6 @@ import {
 } from './skillsSection.config';
 
 const SkillsSection = () => {
-  // Separar skills por categoría
-
   return (
     <>
       <div className="cst-section-separator">
@@ -30,9 +28,9 @@ const SkillsSection = () => {
         <div className="row">
           <div className="col-md-6 mb-3">
             <h3 className="text-center mb-4">Technical Skills</h3>
-            {TECHNICAL_SKILLS.map((skill: SkillProps, index: number) => (
+            {TECHNICAL_SKILLS.map((skill: SkillProps) => (
               <SkillPill
-                key={index}
+                key={skill.title}
                 title={skill.title}
                 description={skill.description}
               />
@@ -40,9 +38,9 @@ const SkillsSection = () => {
           </div>
           <div className="col-md-6 mb-3">
             <h3 className="text-center mb-4">Soft Skills</h3>
-            {SOFT_SKILLS.map((skill: SkillProps, index: number) => (
+            {SOFT_SKILLS.map((skill: SkillProps) => (
               <SkillPill
-                key={index}
+                key={skill.title}
                 title={skill.title}
                 description={skill.description}
               />
