@@ -65,13 +65,13 @@ const Gallery = ({ images }: Props) => {
     const handleManualScroll = () => {
       if (isScrollingProgrammatically.current) return;
 
-      // Clear existing timeout
       if (scrollTimeout) {
         clearTimeout(scrollTimeout);
       }
 
-      // Debounce scroll detection to avoid conflicts
       scrollTimeout = setTimeout(() => {
+        if (!slider || !sliderRef.current) return;
+
         const scrollLeft = slider.scrollLeft;
         const slideWidth = slider.offsetWidth;
 
@@ -95,7 +95,9 @@ const Gallery = ({ images }: Props) => {
       if (scrollTimeout) {
         clearTimeout(scrollTimeout);
       }
-      slider.removeEventListener('scroll', handleManualScroll);
+      if (slider) {
+        slider.removeEventListener('scroll', handleManualScroll);
+      }
     };
   }, [activeIndex, images.length]);
 
