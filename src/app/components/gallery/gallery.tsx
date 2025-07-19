@@ -40,17 +40,28 @@ const Gallery = ({ images }: Props) => {
   // Handle scroll when activeIndex changes
   useEffect(() => {
     if (sliderRef.current) {
-      const targetImage = sliderRef.current.children[
-        activeIndex
-      ] as HTMLElement;
+      const container = sliderRef.current;
 
-      if (targetImage) {
-        targetImage.scrollIntoView({
-          behavior: 'smooth',
-          block: 'nearest',
-          inline: 'start',
-        });
-      }
+      const containerRect = container.getBoundingClientRect();
+      const containerStyle = getComputedStyle(container);
+
+      const borderLeft = parseFloat(containerStyle.borderLeftWidth) || 0;
+      const borderRight = parseFloat(containerStyle.borderRightWidth) || 0;
+      const paddingLeft = parseFloat(containerStyle.paddingLeft) || 0;
+      const paddingRight = parseFloat(containerStyle.paddingRight) || 0;
+
+      const exactWidth =
+        containerRect.width -
+        borderLeft -
+        borderRight -
+        paddingLeft -
+        paddingRight;
+      const targetScroll = activeIndex * exactWidth;
+
+      container.scrollTo({
+        left: targetScroll,
+        behavior: 'smooth',
+      });
     }
   }, [activeIndex]);
 
