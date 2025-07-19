@@ -1,4 +1,5 @@
 import AwardsSection from '../../components/awardsSection/awardsSection';
+import PersonalSection from '../../components/personalSection/personalSection';
 import PresentationCard from '../../components/presentationCard/presentationCard';
 import ResumeSection from '../../components/resumeSection/resumeSection';
 import SkillsSection from '../../components/skillsSection/skillsSection';
@@ -65,6 +66,7 @@ function AboutMe() {
       <AwardsSection></AwardsSection>
       <ResumeSection></ResumeSection>
       <SkillsSection></SkillsSection>
+      <PersonalSection></PersonalSection>
     </div>
   );
 }
