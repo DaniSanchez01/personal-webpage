@@ -13,7 +13,7 @@ export interface ImageProps {
 
 const Gallery = ({ images }: Props) => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const intervalRef = useRef<number | null>(null);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const sliderRef = useRef<HTMLDivElement>(null);
 
   const startAutoScroll = () => {
