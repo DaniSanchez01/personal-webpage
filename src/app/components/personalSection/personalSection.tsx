@@ -13,7 +13,7 @@ const PersonalSection = () => {
       </div>
       <div className="container">
         <div className="row ">
-          <div className="col-md-6">
+          <div className="col-xl-6">
             <p>
               Work is a very important part of life, but I would like to use
               this section to talk about my <strong>personal interests</strong>{' '}
@@ -71,7 +71,7 @@ const PersonalSection = () => {
               wanted to show them to the world ^-^
             </p>
           </div>
-          <div className="col-md-6">
+          <div className="col-xl-6">
             <Gallery images={PERSONAL_SECTION_DATA}></Gallery>
           </div>
         </div>

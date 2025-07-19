@@ -17,6 +17,12 @@
   box-shadow: 0 1.5rem 3rem -0.75rem rgba(0, 0, 0, 0.25);
   border-radius: 0.5rem;
   border: 0.15rem solid #000;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.cst-slider::-webkit-scrollbar {
+  display: none;
 }
 
 .cst-slider img {
@@ -38,12 +44,101 @@
 .cst-slider-nav a {
   width: 0.75rem;
   height: 0.75rem;
-  border-radius: 50%;
+  border-radius: 0.5rem 0.5rem;
   background-color: #fff;
   opacity: 0.75;
-  transition: opacity 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    width 0.3s ease;
+  cursor: pointer;
 }
 
 .cst-slider-nav a:hover {
   opacity: 1;
+}
+
+.cst-slider-nav a.active {
+  width: 1.5rem;
+  opacity: 1;
+}
+
+.cst-slider-arrow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 4rem;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: all 0.3s ease;
+  border-radius: 0.5rem;
+}
+
+.cst-slider-arrow-left {
+  left: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.3) 40%,
+    rgba(0, 0, 0, 0.1) 70%,
+    transparent 100%
+  );
+  justify-content: flex-start;
+  padding-left: 1rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.cst-slider-arrow-right {
+  right: 0;
+  background: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.3) 40%,
+    rgba(0, 0, 0, 0.1) 70%,
+    transparent 100%
+  );
+  justify-content: flex-end;
+  padding-right: 1rem;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.cst-slider-arrow-left:hover {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.4) 40%,
+    rgba(0, 0, 0, 0.15) 70%,
+    transparent 100%
+  );
+}
+
+.cst-slider-arrow-right:hover {
+  background: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.4) 40%,
+    rgba(0, 0, 0, 0.15) 70%,
+    transparent 100%
+  );
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .cst-slider-arrow {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .cst-slider-arrow {
+    display: none;
+  }
 }

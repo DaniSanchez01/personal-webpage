@@ -1,7 +1,21 @@
 /* Globals */
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .app-globals {
   background-color: var(--cst-palette2-3);
   min-height: 100vh;
+  flex: 1;
+  contain: layout style paint;
 }
 
 h3 {
