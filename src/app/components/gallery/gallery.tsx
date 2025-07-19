@@ -60,25 +60,43 @@ const Gallery = ({ images }: Props) => {
     const slider = sliderRef.current;
     if (!slider) return;
 
+    let scrollTimeout: number | null = null;
+
     const handleManualScroll = () => {
       if (isScrollingProgrammatically.current) return;
 
-      const scrollLeft = slider.scrollLeft;
-      const slideWidth = slider.offsetWidth;
-      const currentIndex = Math.round(scrollLeft / slideWidth);
-
-      if (
-        currentIndex !== activeIndex &&
-        currentIndex >= 0 &&
-        currentIndex < images.length
-      ) {
-        setActiveIndex(currentIndex);
-        startAutoScroll();
+      // Clear existing timeout
+      if (scrollTimeout) {
+        clearTimeout(scrollTimeout);
       }
+
+      // Debounce scroll detection to avoid conflicts
+      scrollTimeout = setTimeout(() => {
+        const scrollLeft = slider.scrollLeft;
+        const slideWidth = slider.offsetWidth;
+
+        const rawIndex = scrollLeft / slideWidth;
+        const currentIndex = Math.round(rawIndex);
+        if (
+          currentIndex !== activeIndex &&
+          currentIndex >= 0 &&
+          currentIndex < images.length &&
+          Math.abs(rawIndex - currentIndex) < 0.3
+        ) {
+          setActiveIndex(currentIndex);
+          startAutoScroll();
+        }
+      }, 100);
     };
 
-    slider.addEventListener('scroll', handleManualScroll);
-    return () => slider.removeEventListener('scroll', handleManualScroll);
+    slider.addEventListener('scroll', handleManualScroll, { passive: true });
+
+    return () => {
+      if (scrollTimeout) {
+        clearTimeout(scrollTimeout);
+      }
+      slider.removeEventListener('scroll', handleManualScroll);
+    };
   }, [activeIndex, images.length]);
 
   const handleImageChange = (index: number) => {
