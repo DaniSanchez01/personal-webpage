@@ -11,14 +11,13 @@
 .cst-slider {
   display: flex;
   aspect-ratio: 1/1;
-  overflow-x: auto;
+  overflow-x: hidden; /* Disable manual scroll - use arrows/indicators only */
 
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
   border-radius: 0.5rem;
   border: 0.15rem solid #000;
   scrollbar-width: none;
   -ms-overflow-style: none;
-
   overscroll-behavior: contain;
 }
 
@@ -28,7 +27,6 @@
 
 .cst-slider img {
   flex: 1 0 100%;
-  scroll-snap-align: start;
   object-fit: cover;
 }
 
@@ -130,16 +128,4 @@
     rgba(0, 0, 0, 0.15) 70%,
     transparent 100%
   );
-}
-
-@media (hover: none) and (pointer: coarse) {
-  .cst-slider-arrow {
-    display: none;
-  }
-}
-
-@media (max-width: 640px) {
-  .cst-slider-arrow {
-    display: none;
-  }
 }

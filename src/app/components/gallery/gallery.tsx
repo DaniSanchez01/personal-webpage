@@ -15,7 +15,6 @@ const Gallery = ({ images }: Props) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const intervalRef = useRef<number | null>(null);
   const sliderRef = useRef<HTMLDivElement>(null);
-  const isScrollingProgrammatically = useRef(false);
 
   const startAutoScroll = () => {
     if (intervalRef.current) {
@@ -40,66 +39,20 @@ const Gallery = ({ images }: Props) => {
 
   // Handle scroll when activeIndex changes
   useEffect(() => {
-    if (images.length > 0 && sliderRef.current) {
-      isScrollingProgrammatically.current = true;
+    if (sliderRef.current) {
+      const targetImage = sliderRef.current.children[
+        activeIndex
+      ] as HTMLElement;
 
-      const targetScroll = activeIndex * sliderRef.current.offsetWidth;
-      sliderRef.current.scrollTo({
-        left: targetScroll,
-        behavior: 'smooth',
-      });
-
-      setTimeout(() => {
-        isScrollingProgrammatically.current = false;
-      }, 500);
+      if (targetImage) {
+        targetImage.scrollIntoView({
+          behavior: 'smooth',
+          block: 'nearest',
+          inline: 'start',
+        });
+      }
     }
-  }, [activeIndex, images]);
-
-  // Handle manual scroll
-  useEffect(() => {
-    const slider = sliderRef.current;
-    if (!slider) return;
-
-    let scrollTimeout: number | null = null;
-
-    const handleManualScroll = () => {
-      if (isScrollingProgrammatically.current) return;
-
-      if (scrollTimeout) {
-        clearTimeout(scrollTimeout);
-      }
-
-      scrollTimeout = setTimeout(() => {
-        if (!slider || !sliderRef.current) return;
-
-        const scrollLeft = slider.scrollLeft;
-        const slideWidth = slider.offsetWidth;
-
-        const rawIndex = scrollLeft / slideWidth;
-        const currentIndex = Math.round(rawIndex);
-        if (
-          currentIndex !== activeIndex &&
-          currentIndex >= 0 &&
-          currentIndex < images.length &&
-          Math.abs(rawIndex - currentIndex) < 0.3
-        ) {
-          setActiveIndex(currentIndex);
-          startAutoScroll();
-        }
-      }, 100);
-    };
-
-    slider.addEventListener('scroll', handleManualScroll, { passive: true });
-
-    return () => {
-      if (scrollTimeout) {
-        clearTimeout(scrollTimeout);
-      }
-      if (slider) {
-        slider.removeEventListener('scroll', handleManualScroll);
-      }
-    };
-  }, [activeIndex, images.length]);
+  }, [activeIndex]);
 
   const handleImageChange = (index: number) => {
     setActiveIndex(index);
@@ -145,7 +98,7 @@ const Gallery = ({ images }: Props) => {
         )}
 
         <div className="cst-slider-nav">
-          {images.map((image, index) => (
+          {images.map((_, index) => (
             <a
               key={index}
               className={activeIndex === index ? 'active' : ''}
