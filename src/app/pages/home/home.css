@@ -67,7 +67,7 @@
   top: 7.73%;
   left: 9.7%;
   width: 80.6%;
-  aspect-ratio: 266 / 370;
+  aspect-ratio: 266 / 266;
   object-fit: cover;
   border: 3px solid var(--cst-palette2-6);
 }
@@ -122,14 +122,14 @@
   .cst-hero-visual {
     width: var(--cst-hero-circle);
     aspect-ratio: 520 / 540;
-    margin: 20px 0 0;
+    margin: 20px 60px;
   }
 
   .cst-hero-photo {
     top: 7.41%;
     left: 13.46%;
     width: 73.08%;
-    aspect-ratio: 380 / 500;
+    aspect-ratio: 380 / 440;
   }
 
   .cst-home-section {
