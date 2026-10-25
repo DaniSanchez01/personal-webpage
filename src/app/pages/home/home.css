@@ -1,0 +1,138 @@
+/* Hero. Proportions come from the design boards (390px mobile, 1440px desktop). */
+.cst-hero {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-top: 28px;
+}
+
+.cst-hero-greeting {
+  margin: 0 0 6px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.cst-hero-name {
+  margin: 0;
+  font-family: var(--cst-font-display);
+  font-size: clamp(60px, 20vw, 78px);
+  font-weight: 700;
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+}
+
+.cst-hero-role {
+  margin: 20px 0 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.cst-hero-intro,
+.cst-hero-description {
+  margin: 12px 0 0;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.cst-hero-intro {
+  font-weight: 700;
+}
+
+.cst-hero-description {
+  color: var(--cst-palette2-gray);
+}
+
+.cst-hero-cta {
+  display: block;
+  margin-top: 28px;
+  text-align: center;
+}
+
+.cst-hero-visual {
+  position: relative;
+  width: min(330px, 100%);
+  aspect-ratio: 330 / 330;
+  margin-inline: auto;
+}
+
+.cst-hero-circle {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: var(--cst-palette2-7);
+}
+
+.cst-hero-photo {
+  position: absolute;
+  top: 7.73%;
+  left: 9.7%;
+  width: 80.6%;
+  aspect-ratio: 266 / 266;
+  object-fit: cover;
+  border: 3px solid var(--cst-palette2-6);
+}
+
+.cst-home-section {
+  margin-top: 40px;
+}
+
+@media (min-width: 768px) {
+  .cst-hero {
+    --cst-hero-circle: clamp(280px, 36vw, 520px);
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) calc(var(--cst-hero-circle) * 1.154);
+    column-gap: 24px;
+    align-items: start;
+    padding-top: 32px;
+    padding-bottom: 96px;
+  }
+
+  .cst-hero-text {
+    padding-top: 30px;
+  }
+
+  .cst-hero-greeting {
+    margin-bottom: 8px;
+    font-size: 22px;
+  }
+
+  .cst-hero-name {
+    font-size: clamp(80px, 10.4vw, 150px);
+  }
+
+  .cst-hero-role {
+    margin-top: 28px;
+    font-size: 24px;
+  }
+
+  .cst-hero-intro,
+  .cst-hero-description {
+    max-width: 440px;
+    margin-top: 14px;
+    font-size: 19px;
+    line-height: 1.65;
+  }
+
+  .cst-hero-cta {
+    display: inline-block;
+    margin-top: 32px;
+  }
+
+  .cst-hero-visual {
+    width: var(--cst-hero-circle);
+    aspect-ratio: 520 / 540;
+    margin: auto 60px;
+  }
+
+  .cst-hero-photo {
+    top: 7.41%;
+    left: 13.46%;
+    width: 73.08%;
+    aspect-ratio: 380 / 440;
+  }
+
+  .cst-home-section {
+    margin-top: 0;
+  }
+}

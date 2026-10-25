@@ -6,14 +6,19 @@ export interface PillProps {
   path: string;
 }
 
-function Pill({ title, description, path }: PillProps) {
+interface Props extends PillProps {
+  index: number;
+}
+
+function Pill({ index, title, description, path }: Props) {
   return (
-    <Link to={path} className="text-decoration-none text-reset">
-      <div className="cst-pill enhanced-pill">
-        <h3 className="pill-title">{title}</h3>
-        <p className="pill-description">{description}</p>
-        <div className="pill-accent"></div>
-      </div>
+    <Link to={path} className="cst-pill">
+      <span className="pill-index">{String(index + 1).padStart(2, '0')}</span>
+      <h3 className="pill-title">{title}</h3>
+      <p className="pill-description">{description}</p>
+      <span className="pill-arrow" aria-hidden="true">
+        →
+      </span>
     </Link>
   );
 }

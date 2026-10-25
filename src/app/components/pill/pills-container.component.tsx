@@ -6,17 +6,17 @@ interface PillsContainerProps {
 
 function PillsContainer({ items }: PillsContainerProps) {
   return (
-    <>
+    <div className="cst-pills-container">
       {items.map((item, index) => (
-        <div className="col-auto col-md-4 mb-3" key={index}>
-          <Pill
-            title={item.title}
-            description={item.description}
-            path={item.path}
-          />
-        </div>
+        <Pill
+          key={item.path}
+          index={index}
+          title={item.title}
+          description={item.description}
+          path={item.path}
+        />
       ))}
-    </>
+    </div>
   );
 }
 

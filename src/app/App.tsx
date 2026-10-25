@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import './styles/colors.css';
+import './styles/typography.css';
 import Navbar from './navbar/navbar.component';
 import Home from './pages/home/home.tsx';
 import Blog from './pages/blog/blog.tsx';
