@@ -17,9 +17,8 @@ export interface ExternalLink {
 export const INTERNAL_LINKS: InternalLink[] = [
   { id: 'home', to: '/', label: 'Home' },
   { id: 'about', to: '/about', label: 'About Me' },
-  { id: 'projects', to: '/projects', label: 'Projects' },
   { id: 'blog', to: '/blog', label: 'Blog' },
-  { id: 'contact', to: '/contact', label: 'Contact' },
+  { id: 'projects', to: '/projects', label: 'Projects' },
 ];
 
 export const EXTERNAL_LINKS: ExternalLink[] = [
