@@ -1,65 +1,33 @@
-.cst-form {
-  background: linear-gradient(
-    135deg,
-    var(--cst-palette2-1),
-    var(--cst-palette2-3)
-  );
-  padding: 2.5rem;
-  border-radius: 1.5rem;
-  box-shadow:
-    0 20px 40px rgba(0, 0, 0, 0.1),
-    0 0 0 1px rgba(211, 87, 70, 0.1);
-  border: none;
-  position: relative;
-  overflow: hidden;
-}
-
-.cst-form::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(
-    90deg,
-    var(--cst-palette2-7),
-    var(--cst-palette2-6),
-    var(--cst-palette2-7)
-  );
+.cst-form-fields {
+  display: grid;
+  gap: 18px;
 }
 
 .cst-form .form-label {
+  display: block;
+  margin-bottom: 8px;
   color: var(--cst-palette2-6);
-  font-weight: 600;
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
+  font-size: 12px;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.06em;
 }
 
 .cst-form .form-control {
-  border: 2px solid transparent;
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 12px;
-  padding: 0.75rem 1rem;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 13px 16px;
+  border: 2px solid var(--cst-palette2-6);
+  border-radius: 0;
+  background: var(--cst-palette2-1);
+  color: var(--cst-palette2-6);
 }
 
 .cst-form .form-control:focus {
-  border-color: var(--cst-palette2-7);
-  background: white;
-  box-shadow:
-    0 0 0 3px rgba(211, 87, 70, 0.1),
-    0 4px 15px rgba(211, 87, 70, 0.1);
-  transform: translateY(-2px);
+  outline: 3px solid var(--cst-palette2-7);
+  box-shadow: none;
 }
 
 .cst-form .form-control::placeholder {
   color: var(--cst-palette2-gray);
-  font-weight: 400;
 }
 
 .cst-form textarea.form-control {
@@ -68,76 +36,55 @@
 }
 
 .cst-form .cst-submit-btn {
-  width: 100%;
-  margin-top: 1rem;
-  padding: 1rem 2rem;
-  font-size: 1.1rem;
-  border-radius: 12px;
-  background: linear-gradient(
-    135deg,
-    var(--cst-palette2-7),
-    var(--cst-palette2-6)
-  );
-  border: none;
-  color: white;
-  font-weight: 600;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
-}
-
-.cst-form .cst-submit-btn::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  transition: all 0.3s ease;
-  transform: translate(-50%, -50%);
+  padding: 16px;
+  border: 2px solid var(--cst-palette2-6);
+  background: var(--cst-palette2-7);
+  color: var(--cst-palette2-6);
+  font-size: 17px;
 }
 
 .cst-form .cst-submit-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(211, 87, 70, 0.3);
+  color: var(--cst-palette2-6);
+  box-shadow: 6px 6px 0 var(--cst-palette2-6);
 }
 
 .cst-form .cst-submit-btn:active {
-  transform: translateY(-1px);
+  box-shadow: none;
 }
 
 .cst-form .cst-submit-btn:disabled {
   opacity: 0.7;
   cursor: not-allowed;
   transform: none;
+  box-shadow: none;
 }
 
 .cst-form .alert {
-  border-radius: 12px;
-  border: none;
-  font-weight: 500;
-  position: relative;
-  overflow: hidden;
+  border: 2px solid var(--cst-palette2-6);
+  border-radius: 0;
+  background: var(--cst-palette2-1);
+  color: var(--cst-palette2-6);
+  font-weight: 600;
 }
 
 .cst-form .alert-success {
-  background: linear-gradient(
-    135deg,
-    rgba(40, 167, 69, 0.1),
-    rgba(40, 167, 69, 0.05)
-  );
-  color: #155724;
-  border-left: 4px solid #28a745;
+  border-left: 8px solid #28a745;
 }
 
 .cst-form .alert-danger {
-  background: linear-gradient(
-    135deg,
-    rgba(220, 53, 69, 0.1),
-    rgba(220, 53, 69, 0.05)
-  );
-  color: #721c24;
-  border-left: 4px solid #dc3545;
+  border-left: 8px solid #dc3545;
+}
+
+@media (min-width: 768px) {
+  .cst-form-fields {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cst-form-field-full {
+    grid-column: 1 / -1;
+  }
+
+  .cst-form .form-label {
+    font-size: 13px;
+  }
 }

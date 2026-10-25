@@ -1,0 +1,8 @@
+:root {
+  --cst-font-display: 'Fraunces', serif;
+  --cst-font-body: 'Nunito Sans', sans-serif;
+
+  /* Bootstrap overrides */
+  --bs-body-font-family: var(--cst-font-body);
+  --bs-body-color: var(--cst-palette2-6);
+}

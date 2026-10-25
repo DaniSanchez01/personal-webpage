@@ -1,59 +1,49 @@
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import PillsContainer from '../../components/pill/pills-container.component';
 import { NAVIGATION_PILLS } from './home-sections.fixture';
 import ContactSection from '../../components/contactSection/contactSection.component.tsx';
+import profilePicture from '../../../assets/images/profilePicture.jpg';
+import './home.css';
 
 function Home() {
-  const navigate = useNavigate();
-
   return (
     <>
-      <div className="container">
-        <div className="row align-items-center mt-4">
-          <div className="col-auto col-md-6 mb-3">
-            <h2 className="fw-light text-muted">Hello, I'm</h2>
-            <h1 className="display-4 fw-bold mb-1">Dani Sánchez</h1>
-            <h3
-              className="fw-normal mb-4"
-              style={{ color: 'var(--cst-palette2-7)' }}
-            >
-              Software Engineer
-            </h3>
-            <h5 className="fw-bolder lh-base mt-3 mb-3">
-              Welcome to my personal website! Here you can explore my
-              professional journey, technical skills, and get to know me better.
-            </h5>
-            <p className="lead">
-              Feel free to navigate through the different sections to discover
-              more about my experience and interests in software development.
-            </p>
-            <button
-              type="button"
-              className="cst-read-more-btn"
-              onClick={() => navigate('/about')}
-            >
-              Read more
-            </button>
-          </div>
-          <div className="col-auto col-md-6">
-            <img
-              src="/src/assets/images/profilePicture.png"
-              alt="Personal Picture"
-              className="cst-fit"
-            ></img>
-          </div>
+      <section className="cst-container cst-hero">
+        <div className="cst-hero-text">
+          <p className="cst-hero-greeting">Hello, I'm</p>
+          <h1 className="cst-hero-name">
+            Dani
+            <br />
+            <em className="cst-accent-word">Sánchez</em>
+          </h1>
+          <p className="cst-hero-role">Software Engineer</p>
+          <p className="cst-hero-intro">
+            Welcome to my personal website! Here you can explore my professional
+            journey, technical skills, and get to know me better.
+          </p>
+          <p className="cst-hero-description">
+            Feel free to navigate through the different sections to discover
+            more about my experience and interests in software development.
+          </p>
+          <Link to="/about" className="cst-read-more-btn cst-hero-cta">
+            Read more <span aria-hidden="true">→</span>
+          </Link>
         </div>
-      </div>
-      <div className="cst-home-content">
-        <div className="container pb-4">
-          <div className="mb-5">
-            <div className="row cst-pills-container">
-              <PillsContainer items={NAVIGATION_PILLS} />
-            </div>
-          </div>
-          <ContactSection></ContactSection>
+        <div className="cst-hero-visual">
+          <div className="cst-hero-circle"></div>
+          <img
+            src={profilePicture}
+            alt="Personal Picture"
+            className="cst-hero-photo"
+          />
         </div>
-      </div>
+      </section>
+      <section className="cst-container cst-home-section">
+        <PillsContainer items={NAVIGATION_PILLS} />
+      </section>
+      <section className="cst-container">
+        <ContactSection />
+      </section>
     </>
   );
 }

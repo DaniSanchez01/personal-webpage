@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import DesktopNavbar from './DesktopNavbar';
 import MobileNavbar from './MobileNavbar';
+import expandedLogo from '../../assets/images/expandedLogo.png';
 
 import './navbar.css';
 
@@ -19,16 +20,18 @@ function Navbar() {
   }, []);
 
   return (
-    <nav className="navbar navbar-light cst-navbar sticky-top">
-      <Link className="navbar-brand cst-fit-height" to="/">
-        <img
-          src="/src/assets/images/expandedLogo.png"
-          alt="Logo Personal"
-          className="cst-fit-height"
-        />
-      </Link>
+    <nav className="cst-navbar">
+      <div className="cst-container cst-navbar-content">
+        <Link className="cst-navbar-brand" to="/">
+          <img
+            src={expandedLogo}
+            alt="Logo Personal"
+            className="cst-fit-height"
+          />
+        </Link>
 
-      {isMobile ? <MobileNavbar /> : <DesktopNavbar />}
+        {isMobile ? <MobileNavbar /> : <DesktopNavbar />}
+      </div>
     </nav>
   );
 }

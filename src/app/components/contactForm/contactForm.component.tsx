@@ -1,6 +1,6 @@
 import { useState, useRef, FormEvent } from 'react';
 import emailjs from '@emailjs/browser';
-import './ContactForm.css';
+import './contactForm.css';
 
 const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
@@ -47,7 +47,8 @@ const ContactForm = () => {
           setFormStatus({
             show: true,
             isError: true,
-            message: 'An error occurred while sending your message. Please try again later.',
+            message:
+              'An error occurred while sending your message. Please try again later.',
           });
         },
       )
@@ -70,70 +71,66 @@ const ContactForm = () => {
         </div>
       )}
 
-      <form ref={form} onSubmit={sendEmail} className="row">
-        <div className="row">
-          <div className="col-md-6 mb-4">
-            <label htmlFor="user_name" className="form-label">
-              Name
-            </label>
-            <input
-              type="text"
-              className="form-control"
-              id="user_name"
-              name="user_name"
-              placeholder="Your name"
-              required
-            />
-          </div>
-          <div className="col-md-6 mb-4">
-            <label htmlFor="user_email" className="form-label">
-              Email
-            </label>
-            <input
-              type="email"
-              className="form-control"
-              id="user_email"
-              name="user_email"
-              placeholder="your@email.com"
-              required
-            />
-          </div>
-          <div className="col-12 mb-4">
-            <label htmlFor="subject" className="form-label">
-              Subject
-            </label>
-            <input
-              type="text"
-              className="form-control"
-              id="subject"
-              name="subject"
-              placeholder="Subject of the message"
-              required
-            />
-          </div>
-          <div className="col-12 mb-4">
-            <label htmlFor="message" className="form-label">
-              Message
-            </label>
-            <textarea
-              className="form-control"
-              id="message"
-              name="message"
-              rows={4}
-              placeholder="Write your message here..."
-              required
-            ></textarea>
-          </div>
-          <div className="col-12">
-            <button
-              type="submit"
-              className="cst-submit-btn cst-read-more-btn"
-              disabled={isSubmitting}
-            >
-              {isSubmitting ? 'Sending...' : 'Send message'}
-            </button>
-          </div>
+      <form ref={form} onSubmit={sendEmail} className="cst-form-fields">
+        <div>
+          <label htmlFor="user_name" className="form-label">
+            Name
+          </label>
+          <input
+            type="text"
+            className="form-control"
+            id="user_name"
+            name="user_name"
+            placeholder="Your name"
+            required
+          />
         </div>
+        <div>
+          <label htmlFor="user_email" className="form-label">
+            Email
+          </label>
+          <input
+            type="email"
+            className="form-control"
+            id="user_email"
+            name="user_email"
+            placeholder="your@email.com"
+            required
+          />
+        </div>
+        <div className="cst-form-field-full">
+          <label htmlFor="subject" className="form-label">
+            Subject
+          </label>
+          <input
+            type="text"
+            className="form-control"
+            id="subject"
+            name="subject"
+            placeholder="Subject of the message"
+            required
+          />
+        </div>
+        <div className="cst-form-field-full">
+          <label htmlFor="message" className="form-label">
+            Message
+          </label>
+          <textarea
+            className="form-control"
+            id="message"
+            name="message"
+            rows={4}
+            placeholder="Write your message here..."
+            required
+          ></textarea>
+        </div>
+        <button
+          type="submit"
+          className="cst-submit-btn cst-read-more-btn cst-form-field-full"
+          disabled={isSubmitting}
+        >
+          {isSubmitting ? 'Sending...' : 'Send message'}
+        </button>
       </form>
     </div>
   );
