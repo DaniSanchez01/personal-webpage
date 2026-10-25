@@ -51,7 +51,7 @@
 .cst-hero-visual {
   position: relative;
   width: min(330px, 100%);
-  aspect-ratio: 330 / 401;
+  aspect-ratio: 330 / 330;
   margin-inline: auto;
 }
 
@@ -122,7 +122,7 @@
   .cst-hero-visual {
     width: var(--cst-hero-circle);
     aspect-ratio: 520 / 540;
-    margin: 20px 60px;
+    margin: auto 60px;
   }
 
   .cst-hero-photo {
