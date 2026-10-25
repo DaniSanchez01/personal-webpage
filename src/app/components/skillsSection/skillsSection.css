@@ -1,0 +1,32 @@
+.cst-skills-intro {
+  max-width: 760px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--cst-palette2-gray);
+}
+
+.cst-skills-title {
+  margin: 36px 0 18px;
+  font-family: var(--cst-font-display);
+  font-size: 28px;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .cst-skills-intro {
+    margin-bottom: 36px;
+    font-size: 19px;
+  }
+
+  .cst-skills-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+  }
+
+  .cst-skills-title {
+    margin: 0 0 22px;
+    font-size: 34px;
+  }
+}

@@ -1,16 +1,12 @@
 .cst-timeline {
-  position: relative;
-  padding-left: 40px;
-  margin-top: 2rem;
+  margin-left: 6px;
+  padding-left: 26px;
+  border-left: 3px solid var(--cst-palette2-6);
 }
 
-.cst-timeline::before {
-  content: '';
-  position: absolute;
-  top: -1rem;
-  left: 40px;
-  bottom: 2.5rem;
-  width: 2px;
-  background-color: var(--cst-palette2-2);
-  z-index: 1;
+@media (min-width: 768px) {
+  .cst-timeline {
+    margin-left: 150px;
+    padding-left: 44px;
+  }
 }

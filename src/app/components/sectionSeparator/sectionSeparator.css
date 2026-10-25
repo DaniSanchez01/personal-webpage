@@ -1,0 +1,33 @@
+.cst-section-separator {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 72px 0 28px;
+}
+
+.cst-section-separator::after {
+  content: '';
+  flex: 1 1 24px;
+  height: 3px;
+  background-color: var(--cst-palette2-6);
+}
+
+.cst-section-title {
+  margin: 0;
+  font-family: var(--cst-font-display);
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+@media (min-width: 768px) {
+  .cst-section-separator {
+    gap: 24px;
+    margin: 110px 0 44px;
+  }
+
+  .cst-section-title {
+    font-size: 56px;
+    white-space: nowrap;
+  }
+}

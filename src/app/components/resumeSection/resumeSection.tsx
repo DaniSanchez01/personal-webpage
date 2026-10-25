@@ -1,4 +1,5 @@
 import './resumeSection.css';
+import SectionSeparator from '../sectionSeparator/sectionSeparator';
 import { RESUME_STAGES_DATA } from './resumeSection.config';
 import ResumeStage, {
   Props as ResumeStageProps,
@@ -7,25 +8,13 @@ import ResumeStage, {
 const ResumeSection = () => {
   return (
     <>
-      <div className="cst-section-separator">
-        <span>
-          <img src="/src/assets/icons/favicon.ico" className="cst-h-2" />
-          Resume
-          <img src="/src/assets/icons/favicon.ico" className="cst-h-2" />
-        </span>
-      </div>
-      <div className="container">
-        <div className="row ">
-          <div className="col-md-2"></div>
-          <div className="col-md-8 cst-timeline cst-timeline-line">
-            {RESUME_STAGES_DATA.map(
-              (resumeStage: ResumeStageProps, index: number) => (
-                <ResumeStage key={index} {...resumeStage} />
-              ),
-            )}
-          </div>
-          <div className="col-md-2"></div>
-        </div>
+      <SectionSeparator>
+        <em className="cst-accent-word">Resume</em>
+      </SectionSeparator>
+      <div className="cst-timeline">
+        {RESUME_STAGES_DATA.map((resumeStage: ResumeStageProps) => (
+          <ResumeStage key={resumeStage.title} {...resumeStage} />
+        ))}
       </div>
     </>
   );

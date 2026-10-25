@@ -26,35 +26,30 @@ const ResumeStage = ({
   return (
     <div className="cst-timeline-item">
       <div className="cst-timeline-dot"></div>
-      <div className="cst-timeline-content">
-        <div className="d-flex flex-row mb-3 cst-timeline-header">
-          <img
-            src={organizationLogo}
-            alt={organization}
-            className="cst-organization-logo"
-          />
-          <div className="d-flex flex-column justify-content-center">
-            <div className="cst-timeline-title">{title}</div>
-            <div className="cst-timeline-organization">{organization}</div>
-            <div className="cst-timeline-date">{date}</div>
-          </div>
+      <div className="cst-timeline-header">
+        <img
+          src={organizationLogo}
+          alt={organization}
+          className="cst-organization-logo"
+        />
+        <div>
+          <h3 className="cst-timeline-title">{title}</h3>
+          <p className="cst-timeline-meta">
+            <span className="cst-timeline-organization">{organization}</span>
+            <span className="cst-timeline-date">{date}</span>
+          </p>
         </div>
-        <div className="cst-timeline-description">{description}</div>
-        {stages &&
-          stages.map((stage, index) => (
-            <div key={index} className="cst-timeline-substage">
-              <div className="mb-1">
-                <span className="cst-timeline-substage-title">
-                  {stage.title}
-                </span>
-                <span className="cst-timeline-substage-date">{stage.date}</span>
-              </div>
-              <div className="cst-timeline-substage-description">
-                {stage.description}
-              </div>
-            </div>
-          ))}
       </div>
+      {description && <p className="cst-timeline-description">{description}</p>}
+      {stages?.map((stage) => (
+        <div key={stage.title} className="cst-timeline-substage">
+          <span className="cst-timeline-substage-title">{stage.title}</span>
+          <span className="cst-timeline-substage-date">{stage.date}</span>
+          <p className="cst-timeline-substage-description">
+            {stage.description}
+          </p>
+        </div>
+      ))}
     </div>
   );
 };

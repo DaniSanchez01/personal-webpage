@@ -1,0 +1,25 @@
+.cst-personal {
+  display: flex;
+  flex-direction: column;
+}
+
+.cst-personal-gallery {
+  order: -1;
+  margin: 0 12px 28px 0;
+}
+
+@media (min-width: 768px) {
+  .cst-personal {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    align-items: start;
+  }
+
+  .cst-personal-gallery {
+    position: sticky;
+    top: 24px;
+    order: 0;
+    margin: 0;
+  }
+}
