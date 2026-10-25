@@ -10,9 +10,9 @@ export const TECHNICAL_SKILLS: SkillProps[] = [
       'Backend development and ML. I have experience with frameworks like Django and Flask.',
   },
   {
-    title: 'Java',
+    title: 'AI & Automations',
     description:
-      'I have experience with Java and its ecosystem. I used frameworks like SpringBoot.',
+      'Experienced with Git workflows, branching strategies, and collaboration',
   },
   {
     title: 'JavaScript/TypeScript',
@@ -25,9 +25,9 @@ export const TECHNICAL_SKILLS: SkillProps[] = [
       'Database design, optimization, and management (PostgreSQL, MySQL)',
   },
   {
-    title: 'Git & Version Control',
+    title: 'Java',
     description:
-      'Experienced with Git workflows, branching strategies, and collaboration',
+      'I have experience with Java and its ecosystem. I used frameworks like SpringBoot.',
   },
 ];
 
@@ -50,7 +50,7 @@ export const SOFT_SKILLS: SkillProps[] = [
   {
     title: 'Project Management',
     description:
-      'Experienced withAgile methodologies, sprint planning, and project coordination',
+      'Experienced with Agile methodologies, sprint planning, and project coordination',
   },
   {
     title: 'Motivation',

@@ -1,33 +1,106 @@
+.cst-about-me {
+  padding-bottom: 72px;
+}
+
+.cst-about-me-intro {
+  display: grid;
+  padding-top: 24px;
+}
+
+.cst-about-me-title {
+  margin: 0;
+  font-family: var(--cst-font-display);
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+}
+
+.cst-about-me-card {
+  margin: 32px 12px 0 0;
+}
+
+.cst-about-me-text {
+  margin-top: 44px;
+}
+
+.cst-about-me-lead {
+  margin: 0 0 18px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.cst-about-me-stats {
+  display: grid;
+  gap: 16px;
+  margin: 28px 0 0;
+  padding-top: 18px;
+  border-top: 3px solid var(--cst-palette2-6);
+}
+
 .cst-about-me-subtitle {
-  color: var(--cst-palette2-7);
-  margin-bottom: 0;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--cst-palette2-8);
 }
 
-.cst-section-separator {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  margin: 2rem 0;
+.cst-about-me-value {
+  margin: 0;
+  font-family: var(--cst-font-display);
+  font-size: 22px;
+  font-weight: 700;
 }
 
-.cst-section-separator::before,
-.cst-section-separator::after {
-  content: '';
-  flex: 1;
-  height: 2px;
-  background: black;
-}
+@media (min-width: 768px) {
+  .cst-about-me {
+    padding-bottom: 110px;
+  }
 
-.cst-section-separator::before {
-  margin-right: 1rem;
-}
+  .cst-about-me-intro {
+    grid-template-columns: 320px 1fr;
+    grid-template-areas:
+      'card title'
+      'card text';
+    column-gap: 64px;
+    align-items: start;
+    padding-top: 40px;
+  }
 
-.cst-section-separator::after {
-  margin-left: 1rem;
-}
+  .cst-about-me-title {
+    grid-area: title;
+    font-size: 96px;
+  }
 
-.cst-section-separator span {
-  font-weight: bold;
-  font-size: 1.2rem;
-  white-space: nowrap;
+  .cst-about-me-card {
+    grid-area: card;
+    margin: 0;
+  }
+
+  .cst-about-me-text {
+    grid-area: text;
+    margin-top: 28px;
+  }
+
+  .cst-about-me-lead {
+    font-size: 22px;
+  }
+
+  .cst-about-me-stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 32px;
+    padding-top: 20px;
+  }
+
+  .cst-about-me-subtitle {
+    font-size: 14px;
+  }
+
+  .cst-about-me-value {
+    margin-top: 4px;
+    font-size: 24px;
+  }
 }

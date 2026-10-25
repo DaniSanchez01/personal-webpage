@@ -40,30 +40,28 @@ h3 {
   color: var(--cst-palette2-7);
 }
 
-.cst-h-3 {
-  height: 3em;
-}
-
-.cst-h-2 {
-  height: 2em;
-}
-
 /* Fitting */
 .cst-fit-height {
   height: 100%;
   object-fit: contain;
 }
 
-.cst-fit {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+/* Text */
+.cst-paragraph {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--cst-palette2-9);
 }
 
-.cst-fit-80 {
-  width: 80%;
-  height: 80%;
-  object-fit: contain;
+.cst-paragraph + .cst-paragraph {
+  margin-top: 14px;
+}
+
+@media (min-width: 768px) {
+  .cst-paragraph {
+    line-height: 1.7;
+  }
 }
 
 /* Buttons */
@@ -183,12 +181,6 @@ h3 {
   .cst-pill:hover .pill-description {
     color: var(--cst-palette2-4);
   }
-}
-
-.lead {
-  font-weight: 400;
-  color: var(--cst-palette2-gray);
-  line-height: 1.6;
 }
 
 /* Contact */

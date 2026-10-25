@@ -1,3 +1,6 @@
+import escudoUM from '../../../assets/images/escudoUM.jpg';
+import cyberdatalab from '../../../assets/images/cyberdatalab.jpeg';
+import feverLogo from '../../../assets/images/feverLogo.jpeg';
 import { Props as ResumeStageProps } from './resumeStage/resumeStage';
 
 export const RESUME_STAGES_DATA: ResumeStageProps[] = [
@@ -5,7 +8,7 @@ export const RESUME_STAGES_DATA: ResumeStageProps[] = [
     date: 'Sep 2019 - Jun 2023',
     title: 'Computer Science Student',
     organization: 'University of Murcia',
-    organizationLogo: 'src/assets/images/escudoUM.jpg',
+    organizationLogo: escudoUM,
     description: `Scientific and technological studies in the field of Computer Science, 
       leading to an adequate preparation for professional practice in the development 
       and application of information and communication technologies (ICT).`,
@@ -28,7 +31,7 @@ export const RESUME_STAGES_DATA: ResumeStageProps[] = [
     date: 'Mar 2023 - Sep 2023',
     title: 'Research Intern',
     organization: 'Cybersecurity & Data Science Lab',
-    organizationLogo: 'src/assets/images/cyberdatalab.jpeg',
+    organizationLogo: cyberdatalab,
     description: `Collaboration scholarship for the realization of my TFG, oriented to 
     the extraction of Instagram users, analysis/processing of their data and finally, 
     classifying them through Machine Learning techniques, while contributing in other 
@@ -38,7 +41,7 @@ export const RESUME_STAGES_DATA: ResumeStageProps[] = [
     date: 'Oct 2023 - Now',
     title: 'Software Engineer',
     organization: 'Fever',
-    organizationLogo: 'src/assets/images/feverLogo.jpeg',
+    organizationLogo: feverLogo,
     stages: [
       {
         title: 'Intern Software Engineer',
@@ -46,13 +49,20 @@ export const RESUME_STAGES_DATA: ResumeStageProps[] = [
         using Django and applying DDD, Hexagonal Architecture, Design Patterns and many other approaches to 
         create clean and easily maintainable code. I also had the opportunity to learn Frontend concepts, 
         working with Angular.`,
-        date: 'Oct 2023 - April 2024',
+        date: 'Oct 2023 - March 2024',
       },
       {
         title: 'Junior Software Engineer',
         description: `Creation and improvement of features in websites of different partners, from the 
         structuring of the initial idea to its implementation in both Frontend and Backend.`,
-        date: 'April 2024 - Now',
+        date: 'April 2024 - March 2026',
+      },
+      {
+        title: 'Mid Software Engineer',
+        description: `Leading the design, planning and delivery of features for large-scale partners such as 
+        the London Eye and Madame Tussauds, coordinating the developers involved and supporting the 
+        onboarding of new teammates.`,
+        date: 'April 2026 - Now',
       },
     ],
   },

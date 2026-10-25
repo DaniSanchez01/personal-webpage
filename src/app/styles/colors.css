@@ -1,12 +1,11 @@
 :root {
   --cst-palette2-1: #ffffff; /* surface: inputs, cards, white text on ink */
-  --cst-palette2-2: #dce3f0; /* tint: image placeholders, soft borders */
   --cst-palette2-3: #eef2f8; /* bg: page background */
   --cst-palette2-4: #dde3f0; /* tint: secondary text on ink hover */
   --cst-palette2-5: #b9c3d9; /* tint: inactive indicators */
   --cst-palette2-6: #14213d; /* ink: text, borders, dark buttons, hover fills */
   --cst-palette2-7: #e5533d; /* accent: large text, buttons, dots, shadow hover */
   --cst-palette2-8: #c2381f; /* accent-text: small accent text (numbers, labels) */
-  --cst-palette2-black: #000000;
+  --cst-palette2-9: #2a3858; /* body: long paragraphs */
   --cst-palette2-gray: #3b4a6b; /* muted: secondary text and descriptions */
 }
