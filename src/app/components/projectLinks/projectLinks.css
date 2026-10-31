@@ -1,0 +1,48 @@
+.cst-project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.cst-project-link {
+  padding: 6px 14px;
+  border: 2px solid var(--cst-palette2-6);
+  background-color: var(--cst-palette2-1);
+  color: var(--cst-palette2-6);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+}
+
+.cst-project-link:hover,
+.cst-project-link:focus-visible {
+  background-color: var(--cst-palette2-6);
+  color: var(--cst-palette2-1);
+}
+
+/* Inline variant */
+.cst-project-links-inline {
+  gap: 0;
+}
+
+.cst-project-links-inline .cst-project-link,
+.cst-project-links-inline .cst-project-link:hover {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  color: inherit;
+}
+
+.cst-project-links-inline .cst-project-link:hover {
+  text-decoration: underline;
+}
+
+.cst-project-links-inline .cst-project-link + .cst-project-link::before {
+  content: '·';
+  display: inline-block;
+  margin: 0 6px;
+  text-decoration: none;
+}
