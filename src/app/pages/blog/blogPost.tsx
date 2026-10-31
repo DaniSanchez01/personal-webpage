@@ -42,6 +42,24 @@ function BlogPost() {
 
       <div className="cst-container cst-blog-post-body">
         <div className="cst-blog-post-main">
+          <div className="cst-blog-post-cover-frame">
+            {post.cover ? (
+              <img
+                src={post.cover.src}
+                alt={post.cover.alt}
+                className="cst-blog-post-cover"
+              />
+            ) : (
+              <div
+                className="cst-blog-post-cover cst-blog-post-cover-default"
+                role="img"
+                aria-label="Default cover"
+              >
+                {post.title.charAt(0).toUpperCase()}
+              </div>
+            )}
+          </div>
+          <p className="cst-blog-post-lead">{post.excerpt}</p>
           <BlogContent blocks={post.content} />
         </div>
       </div>
