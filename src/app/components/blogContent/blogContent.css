@@ -1,0 +1,106 @@
+.cst-blog-content p,
+.cst-blog-content li {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--cst-palette2-9);
+}
+
+.cst-blog-content p {
+  margin: 0 0 22px;
+}
+
+.cst-blog-content h2 {
+  margin: 36px 0 14px;
+  font-family: var(--cst-font-display);
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.cst-blog-content ul {
+  margin: 0 0 22px;
+  padding-left: 22px;
+}
+
+.cst-blog-content li {
+  margin-bottom: 8px;
+}
+
+.cst-blog-content pre {
+  margin: 28px 0;
+  padding: 16px;
+  overflow: auto;
+  background-color: var(--cst-palette2-6);
+  color: var(--cst-palette2-3);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* Bootstrap sets its own size and color on <code> */
+.cst-blog-content pre code {
+  font-size: inherit;
+  color: inherit;
+}
+
+.cst-blog-content-quote {
+  margin: 40px 0;
+  font-family: var(--cst-font-display);
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.cst-blog-content-quote::before {
+  content: '“';
+  display: block;
+  color: var(--cst-palette2-7);
+  font-size: 90px;
+  line-height: 0.6;
+}
+
+.cst-blog-content-figure {
+  margin: 28px 0 22px;
+}
+
+.cst-blog-content-figure img {
+  display: block;
+  width: 100%;
+  border: 2px solid var(--cst-palette2-6);
+}
+
+.cst-blog-content-figure figcaption {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--cst-palette2-gray);
+}
+
+@media (min-width: 768px) {
+  .cst-blog-content p,
+  .cst-blog-content li {
+    font-size: 19px;
+    line-height: 1.75;
+  }
+
+  .cst-blog-content li {
+    line-height: 1.7;
+  }
+
+  .cst-blog-content h2 {
+    margin: 48px 0 18px;
+    font-size: 36px;
+  }
+
+  .cst-blog-content pre {
+    padding: 24px;
+    font-size: 15px;
+  }
+
+  .cst-blog-content-quote {
+    font-size: 34px;
+  }
+
+  .cst-blog-content-figure {
+    margin-top: 36px;
+  }
+}

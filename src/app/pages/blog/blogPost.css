@@ -41,6 +41,16 @@
   letter-spacing: -0.03em;
 }
 
+/* Body */
+.cst-blog-post-body {
+  margin-top: 32px;
+  padding-bottom: 72px;
+}
+
+.cst-blog-post-main {
+  max-width: 720px;
+}
+
 /* Not found */
 .cst-blog-post-missing {
   padding-top: 48px;
@@ -62,6 +72,11 @@
 }
 
 @media (min-width: 768px) {
+  .cst-blog-post-body {
+    margin-top: 64px;
+    padding-bottom: 110px;
+  }
+
   .cst-blog-post-hero-content {
     padding-top: 40px;
     padding-bottom: 64px;

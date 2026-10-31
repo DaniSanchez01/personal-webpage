@@ -1,4 +1,5 @@
 import { Link, useParams } from 'react-router-dom';
+import BlogContent from '../../components/blogContent/blogContent';
 import { BLOG_POSTS } from './blog-posts.fixture';
 import { BLOG_CATEGORIES } from './blog.config';
 import './blogPost.css';
@@ -38,6 +39,12 @@ function BlogPost() {
           <h1 className="cst-blog-post-title">{post.title}</h1>
         </div>
       </header>
+
+      <div className="cst-container cst-blog-post-body">
+        <div className="cst-blog-post-main">
+          <BlogContent blocks={post.content} />
+        </div>
+      </div>
     </article>
   );
 }
