@@ -1,5 +1,6 @@
 import { Link, useParams } from 'react-router-dom';
 import { BLOG_POSTS } from './blog-posts.fixture';
+import { BLOG_CATEGORIES } from './blog.config';
 import './blogPost.css';
 
 function BlogPost() {
@@ -22,9 +23,21 @@ function BlogPost() {
 
   return (
     <article className="cst-blog-post">
-      <div className="cst-container">
-        <h1>{post.title}</h1>
-      </div>
+      <header className="cst-blog-post-hero">
+        <div className="cst-container cst-blog-post-hero-content">
+          <Link to="/blog" className="cst-blog-post-back">
+            <span aria-hidden="true">←</span> All posts
+          </Link>
+          <div className="cst-blog-post-tags">
+            {post.categories.map((category) => (
+              <span key={category} className="cst-blog-tag">
+                {BLOG_CATEGORIES[category].tag}
+              </span>
+            ))}
+          </div>
+          <h1 className="cst-blog-post-title">{post.title}</h1>
+        </div>
+      </header>
     </article>
   );
 }

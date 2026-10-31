@@ -9,6 +9,38 @@
   text-decoration: underline;
 }
 
+/* Hero */
+.cst-blog-post-hero {
+  border-top: 3px solid var(--cst-palette2-6);
+  border-bottom: 3px solid var(--cst-palette2-6);
+  background-color: var(--cst-palette2-7);
+}
+
+.cst-blog-post-hero-content {
+  padding-top: 28px;
+  padding-bottom: 40px;
+}
+
+.cst-blog-post-tags {
+  margin-top: 28px;
+}
+
+/* Inverted tags: the default accent background would vanish on the hero */
+.cst-blog-post-hero .cst-blog-tag {
+  background-color: var(--cst-palette2-6);
+  color: var(--cst-palette2-1);
+}
+
+.cst-blog-post-title {
+  max-width: 1000px;
+  margin: 14px 0 0;
+  font-family: var(--cst-font-display);
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
 /* Not found */
 .cst-blog-post-missing {
   padding-top: 48px;
@@ -27,4 +59,28 @@
   margin: 12px 0 24px;
   font-size: 17px;
   color: var(--cst-palette2-gray);
+}
+
+@media (min-width: 768px) {
+  .cst-blog-post-hero-content {
+    padding-top: 40px;
+    padding-bottom: 64px;
+  }
+
+  .cst-blog-post-tags {
+    margin-top: 36px;
+  }
+
+  .cst-blog-post-title {
+    margin-top: 18px;
+    font-size: 72px;
+    line-height: 0.98;
+    letter-spacing: -0.04em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cst-blog-post-title {
+    font-size: 96px;
+  }
 }
