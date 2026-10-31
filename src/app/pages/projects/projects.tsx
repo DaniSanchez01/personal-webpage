@@ -1,6 +1,13 @@
+import ProjectsSectionTitle from '../../components/projectsSectionTitle/projectsSectionTitle';
+import { PROJECTS } from './projects.fixture';
+import { sortByNewest } from './projects.utils';
 import './projects.css';
 
 function Projects() {
+  const projects = sortByNewest(PROJECTS);
+  const featuredProjects = projects.filter((project) => project.featured);
+  const otherProjects = projects.filter((project) => !project.featured);
+
   return (
     <div className="cst-container cst-projects">
       <section className="cst-projects-hero">
@@ -12,6 +19,22 @@ function Projects() {
           Most of them have code or a live version you can open.
         </p>
       </section>
+
+      <section className="cst-projects-featured">
+        <ProjectsSectionTitle
+          aside={`${featuredProjects.length} of ${projects.length}`}
+        >
+          Featured <em className="cst-accent-word">projects</em>
+        </ProjectsSectionTitle>
+      </section>
+
+      {otherProjects.length > 0 && (
+        <section className="cst-projects-more">
+          <ProjectsSectionTitle>
+            More <em className="cst-accent-word">projects</em>
+          </ProjectsSectionTitle>
+        </section>
+      )}
     </div>
   );
 }

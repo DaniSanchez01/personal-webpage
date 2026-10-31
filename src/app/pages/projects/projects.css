@@ -22,6 +22,14 @@
   color: var(--cst-palette2-gray);
 }
 
+.cst-projects-featured {
+  margin-top: 44px;
+}
+
+.cst-projects-more {
+  margin-top: 64px;
+}
+
 @media (min-width: 768px) {
   .cst-projects {
     padding-bottom: 110px;
@@ -38,6 +46,14 @@
   .cst-projects-intro {
     max-width: 560px;
     font-size: 20px;
+  }
+
+  .cst-projects-featured {
+    margin-top: 56px;
+  }
+
+  .cst-projects-more {
+    margin-top: 96px;
   }
 }
 
