@@ -34,6 +34,11 @@
   margin-top: 64px;
 }
 
+.cst-projects-more-list {
+  margin-top: 16px;
+  border-top: 2px solid var(--cst-palette2-6);
+}
+
 @media (min-width: 768px) {
   .cst-projects {
     padding-bottom: 110px;
@@ -62,6 +67,10 @@
 
   .cst-projects-more {
     margin-top: 96px;
+  }
+
+  .cst-projects-more-list {
+    margin-top: 20px;
   }
 }
 

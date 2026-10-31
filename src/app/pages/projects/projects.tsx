@@ -1,4 +1,5 @@
 import ProjectFeatured from '../../components/projectFeatured/projectFeatured';
+import ProjectRow from '../../components/projectRow/projectRow';
 import ProjectsSectionTitle from '../../components/projectsSectionTitle/projectsSectionTitle';
 import { PROJECTS } from './projects.fixture';
 import { sortByNewest } from './projects.utils';
@@ -43,6 +44,11 @@ function Projects() {
           <ProjectsSectionTitle>
             More <em className="cst-accent-word">projects</em>
           </ProjectsSectionTitle>
+          <div className="cst-projects-more-list">
+            {otherProjects.map((project) => (
+              <ProjectRow key={project.slug} project={project} />
+            ))}
+          </div>
         </section>
       )}
     </div>

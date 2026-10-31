@@ -1,0 +1,105 @@
+/* Same markup for both layouts: grid areas reorder it */
+.cst-project-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    'year status'
+    'main main'
+    'stack stack'
+    'links links';
+  align-items: baseline;
+  padding: 22px 4px;
+  border-bottom: 2px solid var(--cst-palette2-6);
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+}
+
+.cst-project-row-year {
+  grid-area: year;
+  color: var(--cst-palette2-8);
+  font-family: var(--cst-font-display);
+  font-size: 20px;
+  font-weight: 700;
+  transition: color 0.2s;
+}
+
+.cst-project-row-main {
+  grid-area: main;
+  margin-top: 8px;
+}
+
+.cst-project-row-title {
+  margin: 0;
+  font-family: var(--cst-font-display);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: inherit;
+}
+
+.cst-project-row-description {
+  margin: 8px 0 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--cst-palette2-gray);
+  transition: color 0.2s;
+}
+
+.cst-project-row-stack {
+  grid-area: stack;
+  margin-top: 12px;
+}
+
+.cst-project-row-status {
+  grid-area: status;
+}
+
+.cst-project-row-links {
+  grid-area: links;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+@media (min-width: 1024px) {
+  .cst-project-row {
+    grid-template-columns: 80px 1.2fr 1.2fr 130px 120px;
+    grid-template-areas: 'year main stack status links';
+    gap: 24px;
+    align-items: center;
+    padding: 22px 20px;
+  }
+
+  .cst-project-row-main,
+  .cst-project-row-stack,
+  .cst-project-row-links {
+    margin-top: 0;
+  }
+
+  .cst-project-row-title {
+    font-size: 22px;
+  }
+
+  .cst-project-row-description {
+    margin-top: 6px;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
+
+/* Visual highlight only: the row itself is not interactive */
+@media (hover: hover) and (min-width: 1024px) {
+  .cst-project-row:hover {
+    background-color: var(--cst-palette2-6);
+    color: var(--cst-palette2-1);
+  }
+
+  .cst-project-row:hover .cst-project-row-year {
+    color: var(--cst-palette2-7);
+  }
+
+  .cst-project-row:hover .cst-project-row-description {
+    color: var(--cst-palette2-4);
+  }
+}
