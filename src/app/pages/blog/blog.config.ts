@@ -1,3 +1,4 @@
+import profilePicture from '../../../assets/images/profilePicture.jpg';
 import { BlogCategory } from './blog.types';
 
 export const POSTS_PER_PAGE = 7;
@@ -12,4 +13,10 @@ export const BLOG_CATEGORIES: Record<
   [BlogCategory.Story]: { tag: 'Story', filter: 'Stories' },
   [BlogCategory.Tech]: { tag: 'Tech', filter: 'Tech' },
   [BlogCategory.Project]: { tag: 'Project', filter: 'Projects' },
+};
+
+export const BLOG_AUTHOR = {
+  name: 'Dani Sánchez',
+  role: 'Software Engineer',
+  photo: profilePicture,
 };

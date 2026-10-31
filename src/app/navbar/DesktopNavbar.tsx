@@ -14,7 +14,7 @@ const DesktopNavbar = () => {
         <NavLink
           key={link.id}
           to={link.to}
-          end
+          end={link.to === '/'}
           className="cst-nav-link cst-underline-link"
         >
           {link.label}
