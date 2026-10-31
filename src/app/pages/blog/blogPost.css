@@ -1,0 +1,30 @@
+.cst-blog-post-back {
+  font-weight: 700;
+  color: inherit;
+  text-decoration: none;
+}
+
+.cst-blog-post-back:hover {
+  color: inherit;
+  text-decoration: underline;
+}
+
+/* Not found */
+.cst-blog-post-missing {
+  padding-top: 48px;
+  padding-bottom: 72px;
+}
+
+.cst-blog-post-missing-title {
+  margin: 0;
+  font-family: var(--cst-font-display);
+  font-size: 46px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.cst-blog-post-missing-text {
+  margin: 12px 0 24px;
+  font-size: 17px;
+  color: var(--cst-palette2-gray);
+}

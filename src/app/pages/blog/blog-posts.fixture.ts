@@ -1,6 +1,6 @@
 import sierraEspuna from '../../../assets/images/personalGallery/sierraEspuna.jpg';
 import kayak from '../../../assets/images/personalGallery/kayak.jpg';
-import { BlogPost } from './blog.types';
+import { BlogCategory, BlogPost } from './blog.types';
 
 export const BLOG_POSTS: BlogPost[] = [
   {
@@ -10,7 +10,7 @@ export const BLOG_POSTS: BlogPost[] = [
       'Shipping to real users changes how you think about code. Some notes on mistakes, mentors and small wins.',
     publishedAt: '2026-10-02',
     readTimeMinutes: 6,
-    categories: ['story', 'tech'],
+    categories: [BlogCategory.Story, BlogCategory.Tech],
     cover: { src: kayak, alt: 'Placeholder cover' },
     content: [
       {
@@ -50,7 +50,7 @@ export const BLOG_POSTS: BlogPost[] = [
       'Clever is expensive. A short defense of plain, readable software and the habits that keep it that way.',
     publishedAt: '2026-09-18',
     readTimeMinutes: 5,
-    categories: ['tech'],
+    categories: [BlogCategory.Tech],
     content: [
       { type: 'paragraph', text: 'Placeholder content for the detail view.' },
     ],
@@ -62,7 +62,7 @@ export const BLOG_POSTS: BlogPost[] = [
       'The stack, the dead ends and the design decisions behind the page you are reading right now.',
     publishedAt: '2026-08-30',
     readTimeMinutes: 8,
-    categories: ['project', 'tech'],
+    categories: [BlogCategory.Project, BlogCategory.Tech],
     content: [
       { type: 'paragraph', text: 'Placeholder content for the detail view.' },
     ],
@@ -74,7 +74,7 @@ export const BLOG_POSTS: BlogPost[] = [
       'What actually changed in my day-to-day when I stopped letting the framework own the domain.',
     publishedAt: '2026-08-11',
     readTimeMinutes: 7,
-    categories: ['tech', 'project'],
+    categories: [BlogCategory.Tech, BlogCategory.Project],
     content: [
       { type: 'paragraph', text: 'Placeholder content for the detail view.' },
     ],
@@ -86,7 +86,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "No laptop, no notifications. What I missed, what I didn't, and what I brought back.",
     publishedAt: '2026-07-24',
     readTimeMinutes: 4,
-    categories: ['story'],
+    categories: [BlogCategory.Story],
     cover: { src: sierraEspuna, alt: 'Placeholder cover' },
     content: [
       { type: 'paragraph', text: 'Placeholder content for the detail view.' },
@@ -99,7 +99,7 @@ export const BLOG_POSTS: BlogPost[] = [
       'A look back at my thesis project: the data, the models and what I would do differently today.',
     publishedAt: '2026-07-05',
     readTimeMinutes: 9,
-    categories: ['project', 'tech'],
+    categories: [BlogCategory.Project, BlogCategory.Tech],
     content: [
       { type: 'paragraph', text: 'Placeholder content for the detail view.' },
     ],
@@ -111,7 +111,7 @@ export const BLOG_POSTS: BlogPost[] = [
       'What felt familiar, what felt alien, and the mental models that finally made it click.',
     publishedAt: '2026-06-14',
     readTimeMinutes: 6,
-    categories: ['tech', 'story'],
+    categories: [BlogCategory.Tech, BlogCategory.Story],
     content: [
       { type: 'paragraph', text: 'Placeholder content for the detail view.' },
     ],

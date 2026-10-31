@@ -46,7 +46,7 @@ const MobileNavbar = () => {
               <NavLink
                 key={link.id}
                 to={link.to}
-                end
+                end={link.to === '/'}
                 className="cst-mobile-link"
                 onClick={closeMenu}
               >
