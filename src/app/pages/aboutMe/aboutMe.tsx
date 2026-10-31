@@ -15,9 +15,7 @@ function AboutMe() {
   return (
     <div className="cst-container cst-about-me">
       <section className="cst-about-me-intro">
-        <h1 className="cst-about-me-title">
-          Intro<em className="cst-accent-word">duce</em>
-        </h1>
+        <h1 className="cst-about-me-title">Introduce</h1>
         <div className="cst-about-me-card">
           <PresentationCard></PresentationCard>
         </div>
