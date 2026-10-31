@@ -1,0 +1,66 @@
+.cst-blog-post-nav {
+  display: grid;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.cst-blog-post-nav-link {
+  display: block;
+  padding: 24px;
+  border: 2px solid var(--cst-palette2-6);
+  background-color: var(--cst-palette2-1);
+  color: var(--cst-palette2-6);
+  text-decoration: none;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+}
+
+.cst-blog-post-nav-link:hover,
+.cst-blog-post-nav-link:focus-visible {
+  background-color: var(--cst-palette2-6);
+  color: var(--cst-palette2-1);
+}
+
+.cst-blog-post-nav-label {
+  display: block;
+  color: var(--cst-palette2-8);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+/* The accent-text red is too dark on ink */
+.cst-blog-post-nav-link:hover .cst-blog-post-nav-label,
+.cst-blog-post-nav-link:focus-visible .cst-blog-post-nav-label {
+  color: var(--cst-palette2-7);
+}
+
+.cst-blog-post-nav-title {
+  display: block;
+  margin-top: 6px;
+  font-family: var(--cst-font-display);
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .cst-blog-post-nav {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 64px;
+  }
+
+  /* Keeps Next on the right even when there is no Previous */
+  .cst-blog-post-nav-next {
+    grid-column: 2;
+    text-align: right;
+  }
+
+  .cst-blog-post-nav-title {
+    font-size: 24px;
+  }
+}

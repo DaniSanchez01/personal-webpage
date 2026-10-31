@@ -1,10 +1,11 @@
 import { Link, useParams } from 'react-router-dom';
 import BlogAuthor from '../../components/blogAuthor/blogAuthor';
 import BlogContent from '../../components/blogContent/blogContent';
+import BlogPostNav from '../../components/blogPostNav/blogPostNav';
 import BlogShare from '../../components/blogShare/blogShare';
 import { BLOG_POSTS } from './blog-posts.fixture';
 import { BLOG_CATEGORIES } from './blog.config';
-import { formatPostDate } from './blog.utils';
+import { formatPostDate, getAdjacentPosts } from './blog.utils';
 import './blogPost.css';
 
 function BlogPost() {
@@ -91,6 +92,7 @@ function BlogPost() {
           <div className="cst-blog-post-compact-only cst-blog-post-share">
             <BlogShare title={post.title} />
           </div>
+          <BlogPostNav {...getAdjacentPosts(BLOG_POSTS, post.slug)} />
         </div>
       </div>
     </article>
