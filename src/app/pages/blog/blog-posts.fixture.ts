@@ -1,5 +1,6 @@
 import sierraEspuna from '../../../assets/images/personalGallery/sierraEspuna.jpg';
 import kayak from '../../../assets/images/personalGallery/kayak.jpg';
+import academicExcellence from '../../../assets/images/academicExcellence.jpg';
 import { BlogCategory, BlogPost } from './blog.types';
 
 export const BLOG_POSTS: BlogPost[] = [
@@ -17,12 +18,24 @@ export const BLOG_POSTS: BlogPost[] = [
         type: 'paragraph',
         text: 'The first thing nobody tells you about a real production system is that most of your work is reading. Reading code, reading logs, reading the intentions of people who left the team two years ago.',
       },
+      {
+        type: 'paragraph',
+        text: 'This is a sample paragraph so the layout can be judged. Replace it with your own story: what happened, what you tried, and what you would tell your past self.',
+      },
       { type: 'heading', text: 'What surprised me' },
       {
         type: 'paragraph',
         text: 'Small details matter more than big ideas. A well named function saves an hour; a missing test costs a weekend.',
       },
+      {
+        type: 'quote',
+        text: 'Code is read far more often than it is written.',
+      },
       { type: 'heading', text: 'A small example' },
+      {
+        type: 'paragraph',
+        text: 'Here is the kind of snippet I would share in a technical post:',
+      },
       {
         type: 'code',
         language: 'python',
@@ -35,6 +48,12 @@ export const BLOG_POSTS: BlogPost[] = [
           'Prefer boring solutions that you can explain in one sentence.',
           'Write the test you wish you had last time.',
         ],
+      },
+      {
+        type: 'image',
+        src: academicExcellence,
+        alt: 'Placeholder inline image',
+        caption: 'Caption for an inline image or screenshot.',
       },
       { type: 'heading', text: 'Closing thoughts' },
       {
