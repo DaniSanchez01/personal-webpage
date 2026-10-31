@@ -26,6 +26,10 @@
   margin-top: 44px;
 }
 
+.cst-projects-featured-list {
+  margin-top: 48px;
+}
+
 .cst-projects-more {
   margin-top: 64px;
 }
@@ -50,6 +54,10 @@
 
   .cst-projects-featured {
     margin-top: 56px;
+  }
+
+  .cst-projects-featured-list {
+    margin-top: 72px;
   }
 
   .cst-projects-more {

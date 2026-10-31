@@ -1,3 +1,4 @@
+import ProjectFeatured from '../../components/projectFeatured/projectFeatured';
 import ProjectsSectionTitle from '../../components/projectsSectionTitle/projectsSectionTitle';
 import { PROJECTS } from './projects.fixture';
 import { sortByNewest } from './projects.utils';
@@ -26,6 +27,15 @@ function Projects() {
         >
           Featured <em className="cst-accent-word">projects</em>
         </ProjectsSectionTitle>
+        <div className="cst-projects-featured-list">
+          {featuredProjects.map((project, index) => (
+            <ProjectFeatured
+              key={project.slug}
+              project={project}
+              index={index}
+            />
+          ))}
+        </div>
       </section>
 
       {otherProjects.length > 0 && (
