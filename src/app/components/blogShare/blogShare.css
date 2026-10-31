@@ -1,0 +1,32 @@
+.cst-blog-share {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+}
+
+.cst-blog-share-chip {
+  display: inline-block;
+  padding: 7px 14px;
+  border: 2px solid var(--cst-palette2-6);
+  background-color: var(--cst-palette2-1);
+  color: var(--cst-palette2-6);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-decoration: none;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+}
+
+.cst-blog-share-chip:hover,
+.cst-blog-share-chip:focus-visible {
+  background-color: var(--cst-palette2-6);
+  color: var(--cst-palette2-1);
+}
+
+@media (min-width: 768px) {
+  .cst-blog-share-chip {
+    padding: 8px 18px;
+  }
+}

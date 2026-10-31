@@ -51,6 +51,38 @@
   max-width: 720px;
 }
 
+.cst-blog-post-aside {
+  display: none;
+}
+
+.cst-blog-post-author {
+  margin-bottom: 32px;
+}
+
+.cst-blog-post-share {
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 3px solid var(--cst-palette2-6);
+}
+
+.cst-blog-post-meta {
+  margin: 32px 0 20px;
+  font-size: 15px;
+  line-height: 2;
+}
+
+.cst-blog-post-meta dt {
+  color: var(--cst-palette2-8);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.cst-blog-post-meta dd {
+  margin: 0;
+}
+
 /* Cover: the accent block peeks out from behind, bottom-right */
 .cst-blog-post-cover-frame {
   position: relative;
@@ -147,6 +179,23 @@
 }
 
 @media (min-width: 1024px) {
+  .cst-blog-post-body {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 72px;
+    align-items: start;
+  }
+
+  .cst-blog-post-aside {
+    display: block;
+    position: sticky;
+    top: 24px;
+  }
+
+  .cst-blog-post-compact-only {
+    display: none;
+  }
+
   .cst-blog-post-title {
     font-size: 96px;
   }
