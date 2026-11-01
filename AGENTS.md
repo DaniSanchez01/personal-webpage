@@ -65,6 +65,22 @@ changing code.
   links use `target="_blank" rel="noopener noreferrer"`.
 - State in the URL (filters, pages) via search params, not component state.
 
+## Reuse
+
+- Before creating a component or style, look for an existing one that does
+  the same job (shared components live in `src/app/components/`).
+- Extract a shared component when the same UI is repeated in practice
+  (rule of three as a guide), not in anticipation of future use.
+- Only merge pieces with the **same responsibility**. If sharing needs
+  several flags, many `if`/`else` branches or props that only one caller
+  uses, keep them separate: a little duplication is cheaper than the wrong
+  abstraction.
+- Shared components own what is common (markup, base look) and accept a
+  `className` or a small variant prop; layout and sizing specific to one
+  page stay in that page's CSS.
+- Reusable styles that are not worth a component (e.g. a button look used
+  by `<a>`, `<Link>` and `<button>`) go as a `cst-` class in `App.css`.
+
 ## CSS
 
 - Plain CSS per component; every class prefixed with `cst-` and named
