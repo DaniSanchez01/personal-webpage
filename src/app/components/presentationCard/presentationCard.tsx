@@ -1,5 +1,6 @@
 import './presentationCard.css';
 import presentationImage from '../../../assets/images/presentationCard.jpeg';
+import cv from '../../../assets/documents/cv.pdf';
 
 const name = 'Daniel Sánchez';
 const profession = 'Software Engineer';
@@ -18,9 +19,15 @@ const PresentationCard = () => {
       <p className="cst-presentation-subtitle">{profession}</p>
       <p className="cst-presentation-contact">{email}</p>
       <p className="cst-presentation-contact">{location}</p>
-      <button type="button" className="cst-read-more-btn cst-presentation-cv">
+      {/* Opens the browser PDF viewer, which lets visitors read it and download it */}
+      <a
+        href={cv}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="cst-read-more-btn cst-presentation-cv"
+      >
         Download CV <span aria-hidden="true">↓</span>
-      </button>
+      </a>
     </div>
   );
 };
