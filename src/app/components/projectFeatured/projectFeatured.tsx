@@ -1,4 +1,6 @@
 import { Project } from '../../pages/projects/projects.types';
+import Cover from '../cover/cover';
+import OffsetFrame from '../offsetFrame/offsetFrame';
 import ProjectLinks from '../projectLinks/projectLinks';
 import ProjectStack from '../projectStack/projectStack';
 import ProjectStatusTag from '../projectStatusTag/projectStatusTag';
@@ -19,23 +21,16 @@ function ProjectFeatured({ project, index }: ProjectFeaturedProps) {
     <article
       className={`cst-project-featured${reversed ? ' cst-project-featured-reversed' : ''}`}
     >
-      <div className="cst-project-featured-media">
-        {screenshot ? (
-          <img
-            src={screenshot.src}
-            alt={screenshot.alt}
-            className="cst-project-featured-screenshot"
-          />
-        ) : (
-          <div
-            className="cst-project-featured-screenshot cst-project-featured-screenshot-default"
-            role="img"
-            aria-label="Default screenshot"
-          >
-            {title.charAt(0).toUpperCase()}
-          </div>
-        )}
-      </div>
+      <OffsetFrame
+        color={reversed ? 'ink' : 'accent'}
+        className="cst-project-featured-media"
+      >
+        <Cover
+          image={screenshot}
+          title={title}
+          className="cst-project-featured-screenshot"
+        />
+      </OffsetFrame>
 
       <div className="cst-project-featured-body">
         <span className="cst-project-featured-label">

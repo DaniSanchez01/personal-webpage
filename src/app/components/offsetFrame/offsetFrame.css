@@ -1,0 +1,33 @@
+.cst-offset-frame {
+  position: relative;
+  /* Room for the block, so it never overflows the column */
+  margin-right: 12px;
+}
+
+.cst-offset-frame::before {
+  content: '';
+  position: absolute;
+  inset: 12px -12px -12px 12px;
+}
+
+.cst-offset-frame > * {
+  position: relative;
+}
+
+.cst-offset-frame-accent::before {
+  background-color: var(--cst-palette2-7);
+}
+
+.cst-offset-frame-ink::before {
+  background-color: var(--cst-palette2-6);
+}
+
+@media (min-width: 768px) {
+  .cst-offset-frame {
+    margin-right: 14px;
+  }
+
+  .cst-offset-frame::before {
+    inset: 14px -14px -14px 14px;
+  }
+}

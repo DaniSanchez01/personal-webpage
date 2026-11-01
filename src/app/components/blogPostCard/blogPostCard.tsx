@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { BLOG_CATEGORIES } from '../../pages/blog/blog.config';
 import { BlogPost } from '../../pages/blog/blog.types';
 import { formatPostDate } from '../../pages/blog/blog.utils';
+import Cover from '../cover/cover';
 import Tag from '../tag/tag';
 import './blogPostCard.css';
 
@@ -19,21 +20,7 @@ function BlogPostCard({ post, featured = false }: BlogPostCardProps) {
       to={`/blog/${slug}`}
       className={`cst-blog-card${featured ? ' cst-blog-card-featured' : ''}`}
     >
-      {post.cover ? (
-        <img
-          src={post.cover.src}
-          alt={post.cover.alt}
-          className="cst-blog-card-cover"
-        />
-      ) : (
-        <div
-          className="cst-blog-card-cover cst-blog-card-cover-default"
-          role="img"
-          aria-label="Default cover"
-        >
-          {title.charAt(0).toUpperCase()}
-        </div>
-      )}
+      <Cover image={post.cover} title={title} className="cst-blog-card-cover" />
       <div className="cst-blog-card-body">
         <div className="cst-blog-card-tags">
           {categories.map((category) => (

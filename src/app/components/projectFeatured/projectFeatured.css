@@ -2,41 +2,16 @@
   margin-top: 48px;
 }
 
-/* Screenshot: a solid block peeks out from behind, bottom-right */
-.cst-project-featured-media {
-  position: relative;
-  margin-right: 12px;
-}
-
-.cst-project-featured-media::before {
-  content: '';
-  position: absolute;
-  inset: 12px -12px -12px 12px;
-  background-color: var(--cst-palette2-7);
-}
-
-.cst-project-featured-reversed .cst-project-featured-media::before {
-  background-color: var(--cst-palette2-6);
-}
-
 .cst-project-featured-screenshot {
-  position: relative;
-  display: block;
-  width: 100%;
   aspect-ratio: 16 / 10;
-  object-fit: cover;
   border: 3px solid var(--cst-palette2-6);
+  font-size: 120px;
 }
 
-.cst-project-featured-screenshot-default {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Light default so it does not merge with the ink block behind it */
+.cst-project-featured-screenshot.cst-cover-default {
   background-color: var(--cst-palette2-4);
   color: var(--cst-palette2-6);
-  font-family: var(--cst-font-display);
-  font-size: 120px;
-  font-weight: 700;
 }
 
 /* Body */
@@ -91,14 +66,6 @@
 @media (min-width: 768px) {
   .cst-project-featured + .cst-project-featured {
     margin-top: 72px;
-  }
-
-  .cst-project-featured-media {
-    margin-right: 14px;
-  }
-
-  .cst-project-featured-media::before {
-    inset: 14px -14px -14px 14px;
   }
 
   .cst-project-featured-title {

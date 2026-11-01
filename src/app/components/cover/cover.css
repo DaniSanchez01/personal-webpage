@@ -1,0 +1,15 @@
+.cst-cover {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+.cst-cover-default {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--cst-palette2-6);
+  color: var(--cst-palette2-1);
+  font-family: var(--cst-font-display);
+  font-weight: 700;
+}
