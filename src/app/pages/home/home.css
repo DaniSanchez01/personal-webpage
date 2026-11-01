@@ -42,12 +42,6 @@
   color: var(--cst-palette2-gray);
 }
 
-.cst-hero-cta {
-  display: block;
-  margin-top: 28px;
-  text-align: center;
-}
-
 .cst-hero-visual {
   position: relative;
   width: min(330px, 100%);
@@ -112,11 +106,6 @@
     margin-top: 14px;
     font-size: 19px;
     line-height: 1.65;
-  }
-
-  .cst-hero-cta {
-    display: inline-block;
-    margin-top: 32px;
   }
 
   .cst-hero-visual {
