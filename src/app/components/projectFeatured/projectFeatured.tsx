@@ -1,9 +1,10 @@
+import { PROJECT_STATUSES } from '../../pages/projects/projects.config';
 import { Project } from '../../pages/projects/projects.types';
 import Cover from '../cover/cover';
 import OffsetFrame from '../offsetFrame/offsetFrame';
 import ProjectLinks from '../projectLinks/projectLinks';
 import ProjectStack from '../projectStack/projectStack';
-import ProjectStatusTag from '../projectStatusTag/projectStatusTag';
+import Tag from '../tag/tag';
 import './projectFeatured.css';
 
 interface ProjectFeaturedProps {
@@ -14,6 +15,7 @@ interface ProjectFeaturedProps {
 function ProjectFeatured({ project, index }: ProjectFeaturedProps) {
   const { title, description, year, status, stack, links, screenshot } =
     project;
+  const statusTag = PROJECT_STATUSES[status];
   // Every other project swaps sides (desktop) and shadow color
   const reversed = index % 2 === 1;
 
@@ -38,7 +40,7 @@ function ProjectFeatured({ project, index }: ProjectFeaturedProps) {
         </span>
         <h3 className="cst-project-featured-title">{title}</h3>
         <div className="cst-project-featured-meta">
-          <ProjectStatusTag status={status} />
+          <Tag variant={statusTag.tagVariant}>{statusTag.label}</Tag>
           <span className="cst-project-featured-year">{year}</span>
         </div>
         <p className="cst-project-featured-description">{description}</p>

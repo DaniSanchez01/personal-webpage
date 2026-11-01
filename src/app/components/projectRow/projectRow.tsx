@@ -1,7 +1,8 @@
+import { PROJECT_STATUSES } from '../../pages/projects/projects.config';
 import { Project } from '../../pages/projects/projects.types';
 import ProjectLinks from '../projectLinks/projectLinks';
 import ProjectStack from '../projectStack/projectStack';
-import ProjectStatusTag from '../projectStatusTag/projectStatusTag';
+import Tag from '../tag/tag';
 import './projectRow.css';
 
 interface ProjectRowProps {
@@ -11,6 +12,7 @@ interface ProjectRowProps {
 /** Not a link itself: only its project links are interactive. */
 function ProjectRow({ project }: ProjectRowProps) {
   const { title, description, year, status, stack, links } = project;
+  const statusTag = PROJECT_STATUSES[status];
 
   return (
     <article className="cst-project-row">
@@ -23,7 +25,7 @@ function ProjectRow({ project }: ProjectRowProps) {
         <ProjectStack stack={stack} />
       </div>
       <div className="cst-project-row-status">
-        <ProjectStatusTag status={status} />
+        <Tag variant={statusTag.tagVariant}>{statusTag.label}</Tag>
       </div>
       <div className="cst-project-row-links">
         <ProjectLinks links={links} inline />
