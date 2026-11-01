@@ -90,6 +90,25 @@ h3 {
   box-shadow: none;
 }
 
+/* Outlined button: <a> or <button>, filled with ink on hover. Callers set the size */
+.cst-outline-btn {
+  display: inline-block;
+  border: 2px solid var(--cst-palette2-6);
+  background-color: var(--cst-palette2-1);
+  color: var(--cst-palette2-6);
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+}
+
+.cst-outline-btn:hover,
+.cst-outline-btn:focus-visible {
+  background-color: var(--cst-palette2-6);
+  color: var(--cst-palette2-1);
+}
+
 /* Pills */
 .cst-pills-container {
   border-top: 2px solid var(--cst-palette2-6);

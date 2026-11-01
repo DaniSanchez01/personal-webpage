@@ -11,6 +11,10 @@ interface ProjectLinksProps {
 function ProjectLinks({ links, inline = false }: ProjectLinksProps) {
   if (links.length === 0) return null;
 
+  const linkClassName = inline
+    ? 'cst-project-link'
+    : 'cst-outline-btn cst-project-link';
+
   return (
     <div
       className={`cst-project-links${inline ? ' cst-project-links-inline' : ''}`}
@@ -21,7 +25,7 @@ function ProjectLinks({ links, inline = false }: ProjectLinksProps) {
           href={href}
           target="_blank"
           rel="noopener noreferrer"
-          className="cst-project-link"
+          className={linkClassName}
         >
           {PROJECT_LINKS[type].label} <span aria-hidden="true">↗</span>
         </a>
