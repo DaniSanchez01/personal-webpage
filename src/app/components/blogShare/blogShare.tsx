@@ -44,7 +44,7 @@ function BlogShare({ title }: BlogShareProps) {
         href={linkedinHref}
         target="_blank"
         rel="noopener noreferrer"
-        className="cst-blog-share-chip"
+        className="cst-outline-btn cst-blog-share-chip"
         aria-label="Share on LinkedIn"
       >
         in
@@ -53,12 +53,16 @@ function BlogShare({ title }: BlogShareProps) {
         href={xHref}
         target="_blank"
         rel="noopener noreferrer"
-        className="cst-blog-share-chip"
+        className="cst-outline-btn cst-blog-share-chip"
         aria-label="Share on X"
       >
         X
       </a>
-      <button type="button" className="cst-blog-share-chip" onClick={copyLink}>
+      <button
+        type="button"
+        className="cst-outline-btn cst-blog-share-chip"
+        onClick={copyLink}
+      >
         <span aria-live="polite">{COPY_LABELS[copyStatus]}</span>
       </button>
     </div>

@@ -1,0 +1,17 @@
+.cst-project-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cst-project-stack-item {
+  padding: 2px 9px;
+  border: 1.5px solid var(--cst-palette2-6);
+  background-color: var(--cst-palette2-1);
+  color: var(--cst-palette2-6);
+  font-size: 12px;
+  font-weight: 700;
+}

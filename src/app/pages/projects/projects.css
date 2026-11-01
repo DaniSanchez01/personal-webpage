@@ -1,0 +1,98 @@
+.cst-projects {
+  padding-bottom: 72px;
+}
+
+.cst-projects-hero {
+  padding-top: 24px;
+}
+
+.cst-projects-title {
+  margin: 0;
+  font-family: var(--cst-font-display);
+  font-size: 68px;
+  font-weight: 700;
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+}
+
+.cst-projects-intro {
+  margin: 20px 0 0;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--cst-palette2-gray);
+}
+
+.cst-projects-featured {
+  margin-top: 44px;
+}
+
+.cst-projects-featured-list {
+  margin-top: 48px;
+}
+
+.cst-projects-more {
+  margin-top: 64px;
+}
+
+.cst-projects-more-list {
+  margin-top: 16px;
+  border-top: 2px solid var(--cst-palette2-6);
+}
+
+@media (min-width: 768px) {
+  .cst-projects {
+    padding-bottom: 110px;
+  }
+
+  .cst-projects-hero {
+    padding-top: 48px;
+  }
+
+  .cst-projects-title {
+    font-size: 96px;
+  }
+
+  .cst-projects-intro {
+    max-width: 560px;
+    font-size: 20px;
+  }
+
+  .cst-projects-featured {
+    margin-top: 56px;
+  }
+
+  .cst-projects-featured-list {
+    margin-top: 72px;
+  }
+
+  .cst-projects-more {
+    margin-top: 96px;
+  }
+
+  .cst-projects-more-list {
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cst-projects-hero {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 48px;
+    align-items: end;
+  }
+
+  .cst-projects-title {
+    font-size: 120px;
+  }
+
+  /* The design breaks the title after "I've" on wide screens */
+  .cst-projects-title .cst-accent-word {
+    display: block;
+  }
+
+  .cst-projects-intro {
+    max-width: none;
+    margin: 0 0 12px;
+  }
+}

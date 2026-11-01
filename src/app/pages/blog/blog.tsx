@@ -20,7 +20,7 @@ const isBlogCategory = (value: string | null): value is BlogCategory =>
 function Blog() {
   const [searchParams] = useSearchParams();
   const listRef = useRef<HTMLDivElement>(null);
-  const isFirstRender = useRef(true);
+  const lastListView = useRef<string | null>(null);
 
   const categoryParam = searchParams.get(CATEGORY_PARAM);
   const category = isBlogCategory(categoryParam) ? categoryParam : null;
@@ -44,13 +44,16 @@ function Blog() {
     return query ? `?${query}` : '/blog';
   };
 
-  // Bring the list into view when the filter or the page changes
+  // Bring the list into view when the filter or the page changes. Compares
+  // with the previous values instead of skipping the first run, because
+  // StrictMode runs effects twice on mount and the second run would scroll.
   useEffect(() => {
-    if (isFirstRender.current) {
-      isFirstRender.current = false;
-      return;
+    const listView = `${category}-${currentPage}`;
+    const previousListView = lastListView.current;
+    lastListView.current = listView;
+    if (previousListView !== null && previousListView !== listView) {
+      listRef.current?.scrollIntoView({ block: 'start' });
     }
-    listRef.current?.scrollIntoView({ block: 'start' });
   }, [category, currentPage]);
 
   return (

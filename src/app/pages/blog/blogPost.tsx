@@ -3,6 +3,9 @@ import BlogAuthor from '../../components/blogAuthor/blogAuthor';
 import BlogContent from '../../components/blogContent/blogContent';
 import BlogPostNav from '../../components/blogPostNav/blogPostNav';
 import BlogShare from '../../components/blogShare/blogShare';
+import Cover from '../../components/cover/cover';
+import OffsetFrame from '../../components/offsetFrame/offsetFrame';
+import Tag from '../../components/tag/tag';
 import { BLOG_POSTS } from './blog-posts.fixture';
 import { BLOG_CATEGORIES } from './blog.config';
 import { formatPostDate, getAdjacentPosts } from './blog.utils';
@@ -40,9 +43,9 @@ function BlogPost() {
           </Link>
           <div className="cst-blog-post-tags">
             {categoryTags.map((tag) => (
-              <span key={tag} className="cst-blog-tag">
+              <Tag key={tag} variant="ink">
                 {tag}
-              </span>
+              </Tag>
             ))}
           </div>
           <h1 className="cst-blog-post-title">{post.title}</h1>
@@ -65,23 +68,13 @@ function BlogPost() {
         </aside>
 
         <div className="cst-blog-post-main">
-          <div className="cst-blog-post-cover-frame">
-            {post.cover ? (
-              <img
-                src={post.cover.src}
-                alt={post.cover.alt}
-                className="cst-blog-post-cover"
-              />
-            ) : (
-              <div
-                className="cst-blog-post-cover cst-blog-post-cover-default"
-                role="img"
-                aria-label="Default cover"
-              >
-                {post.title.charAt(0).toUpperCase()}
-              </div>
-            )}
-          </div>
+          <OffsetFrame className="cst-blog-post-cover-frame">
+            <Cover
+              image={post.cover}
+              title={post.title}
+              className="cst-blog-post-cover"
+            />
+          </OffsetFrame>
           <div className="cst-blog-post-compact-only cst-blog-post-author">
             <BlogAuthor
               details={`${publishedAt} · ${post.readTimeMinutes} min read`}
