@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { BLOG_CATEGORIES } from '../../pages/blog/blog.config';
 import { BlogPost } from '../../pages/blog/blog.types';
 import { formatPostDate } from '../../pages/blog/blog.utils';
+import Tag from '../tag/tag';
 import './blogPostCard.css';
 
 interface BlogPostCardProps {
@@ -34,11 +35,11 @@ function BlogPostCard({ post, featured = false }: BlogPostCardProps) {
         </div>
       )}
       <div className="cst-blog-card-body">
-        <div>
+        <div className="cst-blog-card-tags">
           {categories.map((category) => (
-            <span key={category} className="cst-blog-tag">
+            <Tag key={category} variant={featured ? 'ink' : 'accent'}>
               {BLOG_CATEGORIES[category].tag}
-            </span>
+            </Tag>
           ))}
         </div>
         <p className="cst-blog-card-meta">

@@ -1,6 +1,6 @@
 import { PROJECT_STATUSES } from '../../pages/projects/projects.config';
 import { ProjectStatus } from '../../pages/projects/projects.types';
-import './projectStatusTag.css';
+import Tag from '../tag/tag';
 
 interface ProjectStatusTagProps {
   status: ProjectStatus;
@@ -8,9 +8,9 @@ interface ProjectStatusTagProps {
 
 function ProjectStatusTag({ status }: ProjectStatusTagProps) {
   return (
-    <span className={`cst-project-status cst-project-status-${status}`}>
+    <Tag variant={PROJECT_STATUSES[status].tagVariant}>
       {PROJECT_STATUSES[status].label}
-    </span>
+    </Tag>
   );
 }
 

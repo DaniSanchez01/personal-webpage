@@ -1,8 +1,6 @@
-.cst-project-status {
+.cst-tag {
   display: inline-block;
   padding: 4px 10px;
-  background-color: var(--cst-palette2-7);
-  color: var(--cst-palette2-6);
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -10,7 +8,12 @@
   white-space: nowrap;
 }
 
-.cst-project-status-completed {
+.cst-tag-accent {
+  background-color: var(--cst-palette2-7);
+  color: var(--cst-palette2-6);
+}
+
+.cst-tag-ink {
   background-color: var(--cst-palette2-6);
   color: var(--cst-palette2-1);
 }

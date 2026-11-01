@@ -3,6 +3,7 @@ import BlogAuthor from '../../components/blogAuthor/blogAuthor';
 import BlogContent from '../../components/blogContent/blogContent';
 import BlogPostNav from '../../components/blogPostNav/blogPostNav';
 import BlogShare from '../../components/blogShare/blogShare';
+import Tag from '../../components/tag/tag';
 import { BLOG_POSTS } from './blog-posts.fixture';
 import { BLOG_CATEGORIES } from './blog.config';
 import { formatPostDate, getAdjacentPosts } from './blog.utils';
@@ -40,9 +41,9 @@ function BlogPost() {
           </Link>
           <div className="cst-blog-post-tags">
             {categoryTags.map((tag) => (
-              <span key={tag} className="cst-blog-tag">
+              <Tag key={tag} variant="ink">
                 {tag}
-              </span>
+              </Tag>
             ))}
           </div>
           <h1 className="cst-blog-post-title">{post.title}</h1>

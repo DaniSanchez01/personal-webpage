@@ -50,16 +50,11 @@
   padding: 20px;
 }
 
-.cst-blog-tag {
-  display: inline-block;
-  margin: 0 6px 6px 0;
-  padding: 4px 10px;
-  background-color: var(--cst-palette2-7);
-  color: var(--cst-palette2-6);
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+.cst-blog-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 6px;
 }
 
 .cst-blog-card-meta {
@@ -93,11 +88,6 @@
 }
 
 /* Featured variant */
-.cst-blog-card-featured .cst-blog-tag {
-  background-color: var(--cst-palette2-6);
-  color: var(--cst-palette2-1);
-}
-
 .cst-blog-card-featured .cst-blog-card-meta,
 .cst-blog-card-featured .cst-blog-card-excerpt {
   color: var(--cst-palette2-6);
