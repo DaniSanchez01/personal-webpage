@@ -23,7 +23,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version-file: .nvmrc
           cache: npm
 
       - name: Install dependencies
@@ -34,7 +34,7 @@ jobs:
 
       # Catches commits that skipped the husky pre-commit hook
       - name: Check formatting
-        run: npx prettier --check .
+        run: npm run format:check
 
       - name: Build
         run: npm run build
