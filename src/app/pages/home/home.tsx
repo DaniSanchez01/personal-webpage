@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import PillsContainer from '../../components/pill/pills-container.component';
 import { NAVIGATION_PILLS } from './home-sections.fixture';
 import ContactSection from '../../components/contactSection/contactSection.component.tsx';
@@ -25,9 +24,6 @@ function Home() {
             Feel free to navigate through the different sections to discover
             more about my experience and interests in software development.
           </p>
-          <Link to="/about" className="cst-read-more-btn cst-hero-cta">
-            Read more <span aria-hidden="true">→</span>
-          </Link>
         </div>
         <div className="cst-hero-visual">
           <div className="cst-hero-circle"></div>
